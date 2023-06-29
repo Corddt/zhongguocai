@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li class="page-item" th:each="i : ${#numbers.sequence(1, totalPages != null ? totalPages : 1)}" th:class="${page != null and page == i} ? 'active' : null">
-                <a class="page-link" th:href="@{/}?page=${i}"><span th:text="${i}"></span></a>
+                <a class="page-link" th:href="@{/(i=${i})}"><span th:text="${i}"></span></a>
             </li>
             <li class="page-item" th:class="${page != null and page == totalPages} ? 'disabled' : null">
                 <a class="page-link" th:href="${page != null and page == totalPages} ? '#' : '@{/}' + '?page=' + ${page != null ? page + 1 : 1}" aria-label="Next">

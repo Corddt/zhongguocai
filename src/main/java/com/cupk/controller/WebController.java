@@ -71,7 +71,7 @@ public class WebController {
         model.addAttribute("page", page);
         model.addAttribute("size", size);
         model.addAttribute("totalPages", totalPages);
-        return "index";
+        return "web/qingdan/caipu";
     }
 
 
