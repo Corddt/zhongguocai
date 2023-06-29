@@ -33,6 +33,14 @@
     overflow: auto;
     background-color: rgba(0,0,0,0.9);
 }
+.model-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;  // 你可以根据需要调整这个值
+max-height: 90%;  // 你可以根据需要调整这个值
+}
 
 .model-content {
     margin: auto;

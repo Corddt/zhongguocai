@@ -1,28 +1,40 @@
 // 获取模态窗口和其中的元素
 var modal = document.getElementById('myModel');
-var modalImg = document.getElementById('img01');
+var modalVideo = document.createElement('video'); // 创建一个新的video元素
+modalVideo.controls = true; // 添加视频控件
 var span = document.getElementsByClassName('close')[0];
 
+// 创建一个新的video元素
+var modalVideo = document.createElement('video');
+modalVideo.controls = true; // 添加视频控件
+modalVideo.className = "model-video"; // 将新的 CSS 类应用到 video 元素
+
+
 // 为所有的小图添加点击事件
-var images = document.getElementsByClassName('small-img');
-for (var i = 0; i < images.length; i++) {
-    images[i].onclick = function(){
+var videos = document.getElementsByClassName('small-img');
+for (var i = 0; i < videos.length; i++) {
+    videos[i].onclick = function(){
         modal.style.display = "block";
-        modalImg.src = this.src;
-        modal.classList.add('show'); // 添加这一行
+        modalVideo.src = this.src;
+        modal.appendChild(modalVideo); // 将新的video元素添加到模态窗口中
+        modal.classList.add('show');
     }
 }
 
 // 为关闭按钮添加点击事件
 span.onclick = function() {
     modal.style.display = "none";
-    modal.classList.remove('show'); // 添加这一行
+    modal.classList.remove('show');
+    modalVideo.pause(); // 在关闭模态窗口时暂停视频
+    modal.removeChild(modalVideo); // 从模态窗口中移除video元素
 }
 
 // 点击大图的任意位置也可以关闭
 modal.onclick = function() {
     modal.style.display = "none";
-    modal.classList.remove('show'); // 添加这一行
+    modal.classList.remove('show');
+    modalVideo.pause(); // 在关闭模态窗口时暂停视频
+    modal.removeChild(modalVideo); // 从模态窗口中移除video元素
 }
 
 //这是导航栏的js
