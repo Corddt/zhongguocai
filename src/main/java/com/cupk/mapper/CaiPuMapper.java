@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CaiPuMapper {
     List<CaiPu> findCaiPuById(int id);
-    List<CaiPu> finaAll(int page,int size);
+    List<CaiPu> findAll(int page,int size);
 
     @Select("SELECT COUNT(*) FROM caipu")
     int count();

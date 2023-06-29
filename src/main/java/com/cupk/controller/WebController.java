@@ -63,19 +63,24 @@ public class WebController {
                        @RequestParam(defaultValue = "0") int page,
                        @RequestParam(defaultValue = "5") int size) {
 
-    List<CaiPu> caiPus =caiPuService.finaAll(page,size);
-    model.addAttribute("caiPus",caiPus);
-    return "index";
+        List<CaiPu> caiPus = caiPuService.findAll(page, size);
+        int totalPages = caiPuService.countPages(size);
+        model.addAttribute("caiPus", caiPus);
+        model.addAttribute("page", page);
+        model.addAttribute("size", size);
+        model.addAttribute("totalPages", totalPages);
+        return "index";
     }
 
     @Autowired(required = false)
     private CityService cityService;
+
     @RequestMapping("/city")
-    public String findAllCity(Model model){
-        List<City> cityList=cityService.findAllCity();
-        for(City city:cityList)
-            System.out.println(city.getMingcheng()+" "+city.getShijing()+" "+city.getTese()+" "+city.getLishi_year());
-        model.addAttribute("citylist",cityList);
+    public String findAllCity(Model model) {
+        List<City> cityList = cityService.findAllCity();
+        for (City city : cityList)
+            System.out.println(city.getMingcheng() + " " + city.getShijing() + " " + city.getTese() + " " + city.getLishi_year());
+        model.addAttribute("citylist", cityList);
         return "web/city";
     }
 }

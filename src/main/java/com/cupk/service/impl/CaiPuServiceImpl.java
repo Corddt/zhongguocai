@@ -30,8 +30,8 @@ public class CaiPuServiceImpl implements CaiPuService {
     }
 
     @Override
-    public List<CaiPu> finaAll(int page,int size) {
-        return caiPuMapper.finaAll(page,size);
+    public List<CaiPu> findAll(int page,int size) {
+        return caiPuMapper.findAll(page,size);
     }
 
     @Override
