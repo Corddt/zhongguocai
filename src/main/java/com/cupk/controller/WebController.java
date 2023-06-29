@@ -2,12 +2,16 @@ package com.cupk.controller;
 
 import com.cupk.pojo.TuPian;
 import com.cupk.pojo.YingXiang;
+import com.cupk.service.CaiPuService;
 import com.cupk.service.TuPianService;
 import com.cupk.service.YingXiangService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -24,22 +28,45 @@ import java.util.List;
 public class WebController {
     @Autowired(required = false)
     private TuPianService tuPianService;
+
     @RequestMapping("/tupian")
-    public String findAllTuPian(Model model){
-        List<TuPian> tuPianList=tuPianService.findAllTuPian();
-        for(TuPian tuPian:tuPianList)
-            System.out.println(tuPian.getTimu()+" "+tuPian.getTupian()+" "+tuPian.getLaiyuan());
-        model.addAttribute("tupianlist",tuPianList);//存储全部的图片信息
+    public String findAllTuPian(Model model) {
+        List<TuPian> tuPianList = tuPianService.findAllTuPian();
+        for (TuPian tuPian : tuPianList)
+            System.out.println(tuPian.getTimu() + " " + tuPian.getTupian() + " " + tuPian.getLaiyuan());
+        model.addAttribute("tupianlist", tuPianList);//存储全部的图片信息
         return "web/tupian_ziyuan";
     }
+
     @Autowired(required = false)
     private YingXiangService yingXiangService;
+
     @RequestMapping("/yingxiang")
-    public String findAllYingXiang(Model model){
-        List<YingXiang> yingXiangList=yingXiangService.findAllYingXiang();
-        for(YingXiang yingXiang:yingXiangList)
-            System.out.println(yingXiang.getTimu()+" "+yingXiang.getYingxiang()+" "+yingXiang.getShipinlaiyuan());
-        model.addAttribute("yingxianglist",yingXiangList);//存储全部的影像信息
+    public String findAllYingXiang(Model model) {
+        List<YingXiang> yingXiangList = yingXiangService.findAllYingXiang();
+        for (YingXiang yingXiang : yingXiangList)
+            System.out.println(yingXiang.getTimu() + " " + yingXiang.getYingxiang() + " " + yingXiang.getShipinlaiyuan());
+        model.addAttribute("yingxianglist", yingXiangList);//存储全部的影像信息
         return "web/yingxiang_ziyuan";
     }
+
+
+    @Autowired(required = false)
+    private CaiPuService caiPuService;
+
+    @RequestMapping("/caipu")
+    public String home(Model model,
+                       @RequestParam(defaultValue = "0") int page,
+                       @RequestParam(defaultValue = "5") int size) {
+
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Caipu> resultPage = caipuRepository.findAll(pageable);
+
+        model.addAttribute("caipus", resultPage.getContent());
+        model.addAttribute("totalPages", resultPage.getTotalPages());
+        model.addAttribute("currentPage", page);
+
+        return "index";
+    }
+
 }
