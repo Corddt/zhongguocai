@@ -53,14 +53,18 @@ public class WebController {
     private CaiPuService caiPuService;
 
     @RequestMapping("/caipu")
-    public String home(Model model,
-                       @RequestParam(defaultValue = "0") int page,
-                       @RequestParam(defaultValue = "5") int size) {
+    public String index(Model model,
+                        @RequestParam(defaultValue = "0") int page,
+                        @RequestParam(defaultValue = "5") int size) {
 
-        List<CaiPu> caiPus = caiPuService.findAll(page, size);
+        List<CaiPu> caiPuList = caiPuService.findAll(page, size);
         System.out.println(caiPus);
         int totalPages = caiPuService.countPages(size);
-        model.addAttribute("caiPus", caiPus);
+//        System.out.println(size + "   " + totalPages);
+        for (CaiPu caipu : caiPuList) {
+            System.out.println(caipu.getId() + " " + caipu.getChengben() + " " + caipu.getPingfen() + " ");
+        }
+        model.addAttribute("caiPus", caiPuList);
         model.addAttribute("page", page);
         model.addAttribute("size", size);
         model.addAttribute("totalPages", totalPages);
