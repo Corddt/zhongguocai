@@ -21,7 +21,7 @@
 .model {
     display: none;
     position: fixed;
-    /* 这将确保模态窗口出现在所有其他内容上方 */
+    /* 模态窗口出现在所有其他内容上方 */
     z-index: 9999;
     padding-top: 100px;
     left: 0;
@@ -38,8 +38,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%;  // 你可以根据需要调整这个值
-max-height: 90%;  // 你可以根据需要调整这个值
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .model-content {
