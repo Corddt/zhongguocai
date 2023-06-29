@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <title>菜谱列表</title>
     <!-- 引入 Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- 页码跳转的 JavaScript 代码 -->
-    <script>
-        function goToPage() {
-            var page = document.getElementById("pageInput").value;
-            window.location.href = "/?page=" + (page - 1);
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 引入自定义 CSS -->
+    <style>
+        th, td {
+            width: 20%;
+            text-align: center;
         }
-    </script>
+    </style>
 </head>
 <body>
-<div class="container">
+<div class="container mt-3">
+    <!-- 菜谱表格 -->
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -25,39 +27,33 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="caipu:${caipus}">
+        <tr th:each="caipu : ${caipus}">
             <td th:text="${caipu.caiming}"></td>
-            <td th:text="${caipu.pingfen}"></td>
+            <td th:text="${caipu.jieshao}"></td>
             <td th:text="${caipu.peiliao}"></td>
             <td th:text="${caipu.zuofa}"></td>
-            <td th:text="${caipu.chengben}"></td>
-            <td th:text="${caipu.jieshao}"></td>
+            <td th:text="${caipu.pingfen}"></td>
         </tr>
         </tbody>
     </table>
 
-    <!-- 分页部分 -->
-    <nav>
-        <ul class="pagination">
-            <li class="page-item" th:if="${currentPage > 0}">
-                <a class="page-link" th:href="@{/?(page=${currentPage - 1})}">Previous</a>
-            </li>
-            <li class="page-item" th:each="item, stat : ${#numbers.sequence(0, totalPages - 1)}">
-                <a class="page-link" th:href="@{/?(page=${item})}" th:text="${item + 1}"></a>
-            </li>
-            <li class="page-item" th:if="${currentPage < totalPages - 1}">
-                <a class="page-link" th:href="@{/?(page=${currentPage + 1})}">Next</a>
-            </li>
-        </ul>
-    </nav>
+    <!-- 分页组件 -->
+    <!-- 省略 -->
 
     <!-- 跳转页码部分 -->
-    <div class="input-group mb-3">
-        <input type="number" id="pageInput" class="form-control" placeholder="页码" min="1" th:attr="max=${totalPages}">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" onclick="goToPage()">Go</button>
-        </div>
-    </div>
+    <!-- 省略 -->
 </div>
+
+<!-- 引入 jQuery 和 Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- 自定义 JS -->
+<script>
+    function goToPage() {
+        var page = document.getElementById('pageInput').value;
+        window.location.href = '/?page=' + page;
+    }
+</script>
 </body>
 </html>

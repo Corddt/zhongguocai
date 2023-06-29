@@ -1,11 +1,13 @@
 package com.cupk.controller;
 
+import com.cupk.pojo.CaiPu;
 import com.cupk.pojo.TuPian;
 import com.cupk.pojo.YingXiang;
 import com.cupk.service.CaiPuService;
 import com.cupk.service.TuPianService;
 import com.cupk.service.YingXiangService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
@@ -59,14 +61,9 @@ public class WebController {
                        @RequestParam(defaultValue = "0") int page,
                        @RequestParam(defaultValue = "5") int size) {
 
-        Pageable pageable = PageRequest.of(page, size);
-        Page<Caipu> resultPage = caipuRepository.findAll(pageable);
-
-        model.addAttribute("caipus", resultPage.getContent());
-        model.addAttribute("totalPages", resultPage.getTotalPages());
-        model.addAttribute("currentPage", page);
-
-        return "index";
+    List<CaiPu> caiPus =caiPuService.finaAll(page,size);
+    model.addAttribute("caiPus",caiPus);
+    return "index";
     }
 
 }

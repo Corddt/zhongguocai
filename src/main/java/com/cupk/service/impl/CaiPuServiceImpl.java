@@ -28,4 +28,16 @@ public class CaiPuServiceImpl implements CaiPuService {
     public List<CaiPu> findCaiPuById(int id) {
         return caiPuMapper.findCaiPuById(id);
     }
+
+    @Override
+    public List<CaiPu> finaAll(int page,int size) {
+        return caiPuMapper.finaAll(page,size);
+    }
+
+    @Override
+    public int countPages(int size) {
+        int total= caiPuMapper.count();
+        return (total+size-1)/size;
+    }
+
 }
