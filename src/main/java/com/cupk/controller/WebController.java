@@ -20,6 +20,7 @@ import java.util.List;
  * @datatime:2023-06-28 18:30
  */
 @Controller
+@RequestMapping("/zhongguocai")
 public class WebController {
     @Autowired(required = false)
     private TuPianService tuPianService;
