@@ -1,9 +1,11 @@
 package com.cupk.controller;
 
 import com.cupk.pojo.CaiPu;
+import com.cupk.pojo.City;
 import com.cupk.pojo.TuPian;
 import com.cupk.pojo.YingXiang;
 import com.cupk.service.CaiPuService;
+import com.cupk.service.CityService;
 import com.cupk.service.TuPianService;
 import com.cupk.service.YingXiangService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,4 +68,14 @@ public class WebController {
     return "index";
     }
 
+    @Autowired(required = false)
+    private CityService cityService;
+    @RequestMapping("/city")
+    public String findAllCity(Model model){
+        List<City> cityList=cityService.findAllCity();
+        for(City city:cityList)
+            System.out.println(city.getMingcheng()+" "+city.getShijing()+" "+city.getTese()+" "+city.getLishi_year());
+        model.addAttribute("citylist",cityList);
+        return "web/city";
+    }
 }
