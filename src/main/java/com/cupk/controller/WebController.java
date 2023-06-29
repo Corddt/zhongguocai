@@ -1,13 +1,7 @@
 package com.cupk.controller;
 
-import com.cupk.pojo.CaiPu;
-import com.cupk.pojo.City;
-import com.cupk.pojo.TuPian;
-import com.cupk.pojo.YingXiang;
-import com.cupk.service.CaiPuService;
-import com.cupk.service.CityService;
-import com.cupk.service.TuPianService;
-import com.cupk.service.YingXiangService;
+import com.cupk.pojo.*;
+import com.cupk.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -39,7 +33,7 @@ public class WebController {
         for (TuPian tuPian : tuPianList)
             System.out.println(tuPian.getTimu() + " " + tuPian.getTupian() + " " + tuPian.getLaiyuan());
         model.addAttribute("tupianlist", tuPianList);//存储全部的图片信息
-        return "web/tupian_ziyuan";
+        return "web/ziyuan/tupian_ziyuan";
     }
 
     @Autowired(required = false)
@@ -51,7 +45,7 @@ public class WebController {
         for (YingXiang yingXiang : yingXiangList)
             System.out.println(yingXiang.getTimu() + " " + yingXiang.getYingxiang() + " " + yingXiang.getShipinlaiyuan());
         model.addAttribute("yingxianglist", yingXiangList);//存储全部的影像信息
-        return "web/yingxiang_ziyuan";
+        return "web/ziyuan/yingxiang_ziyuan";
     }
 
 
@@ -64,6 +58,7 @@ public class WebController {
                        @RequestParam(defaultValue = "5") int size) {
 
         List<CaiPu> caiPus = caiPuService.findAll(page, size);
+        System.out.println(caiPus);
         int totalPages = caiPuService.countPages(size);
         model.addAttribute("caiPus", caiPus);
         model.addAttribute("page", page);
@@ -81,6 +76,17 @@ public class WebController {
         for (City city : cityList)
             System.out.println(city.getMingcheng() + " " + city.getShijing() + " " + city.getTese() + " " + city.getLishi_year());
         model.addAttribute("citylist", cityList);
-        return "web/city";
+        return "web/qingdan/city";
+    }
+
+    @Autowired(required = false)
+    private MingDanService mingDanService;
+
+    @RequestMapping("/mingdan")
+    public String findAllMingDan(Model model){
+        List<MingDan> mingDanList = mingDanService.findAllMingDan();
+        System.out.println(mingDanList);
+        model.addAttribute("mingdanlist",mingDanList);
+        return "web/qingdan/mingdan";
     }
 }
