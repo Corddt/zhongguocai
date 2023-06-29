@@ -7,8 +7,11 @@
         select *
         from caipu
         where id = #{id}
- </select>
-    <select id="findAll" resultType="com.cupk.pojo.CaiPu">
-        select * from caipu
     </select>
+    <select id="findAll" resultType="com.cupk.pojo.CaiPu">
+        SELECT * FROM caipu LIMIT #{size} OFFSET #{page}
+    </select>
+
+
+
 </mapper>

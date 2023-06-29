@@ -57,22 +57,22 @@ public class WebController {
 
     @RequestMapping("/caipu")
     public String index(Model model,
-                        @RequestParam(defaultValue = "0") int page,
-                        @RequestParam(defaultValue = "5") int size) {
+                        @RequestParam(defaultValue = "1") int page,
+                        @RequestParam(defaultValue = "3") int size) {
 
-        List<CaiPu> caiPuList = caiPuService.findAll(page, size);
-        System.out.println(caiPuList);
+        page = Math.max(1, page);
+        size = Math.max(1, size);
         int totalPages = caiPuService.countPages(size);
-//        System.out.println(size + "   " + totalPages);
-        for (CaiPu caipu : caiPuList) {
-            System.out.println(caipu.getId() + " " + caipu.getChengben() + " " + caipu.getPingfen() + " ");
-        }
+        List<CaiPu> caiPuList = caiPuService.findAll(page, size);
         model.addAttribute("caiPus", caiPuList);
+
         model.addAttribute("page", page);
         model.addAttribute("size", size);
         model.addAttribute("totalPages", totalPages);
         return "web/qingdan/caipu";
     }
+
+
 
 
     //清单中的城市子页面
