@@ -130,4 +130,26 @@ public class WebController {
         model.addAttribute("totalPages", totalPages);
         return "web/qingdan/mingdan";
     }
+
+    //这是清单里面的食材子页面
+    @Autowired(required = false)
+    private ShiCaiService shiCaiService;
+
+    @RequestMapping("/shicai")
+    public String shicai(Model model,
+                                @RequestParam(defaultValue = "0") int page,
+                                @RequestParam(defaultValue = "3") int size) {
+
+        page = Math.max(1, page);
+        size = Math.max(1, size);
+        int totalPages = shiCaiService.countPages(size);
+        List<ShiCai> shiCaiList = shiCaiService.findAll(page, size);
+        model.addAttribute("shicailist", shiCaiList);
+
+        model.addAttribute("page", page);
+        model.addAttribute("size", size);
+        model.addAttribute("totalPages", totalPages);
+        return "web/qingdan/shicai";
+    }
+
 }
