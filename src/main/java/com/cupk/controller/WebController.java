@@ -132,11 +132,11 @@ public class WebController {
         return "web/qingdan/mingdan";
     }
 
-    @GetMapping("/zhongguocai/mingdan/search")
-    public String search(@RequestParam String keyword, Model model) {
-        List<MingDan> result = mingDanService.search(keyword);
-        model.addAttribute("mingdanlist", result);
-        return "mingdan";
+    @RequestMapping("/mingdan_findbystr")
+    public String findMingDanByStr(@RequestParam(value = "searchStr") String searchStr,Model model){
+        List<MingDan> mingDanList=mingDanService.findMingDanByStr(searchStr);
+        model.addAttribute("mingdanlist",mingDanList);
+        return "web/qingdan/mingdan";
     }
 
     //这是清单里面的食材子页面

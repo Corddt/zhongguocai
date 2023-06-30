@@ -88,12 +88,11 @@
 </style>
 
 <div class="centered-container">
-    <div class="caidanlan">
-        &nbsp;&nbsp;
-        <input type="text" id="searchInput" style="height:30px;" placeholder="请输入查询内容">
-        &nbsp;
-        <button onclick="search()" style="height:30px;">搜索</button>
-    </div>
+    <form action="/zhongguocai/mingdan_findbystr" method="post">
+        <input type="text" id="searchStr" style="height:30px;" name="searchStr" placeholder="请输入查询内容">
+        <input type="submit" value="查询">
+    </form>
+
 </div>
 
 
