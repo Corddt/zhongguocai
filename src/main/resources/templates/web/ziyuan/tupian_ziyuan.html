@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!--suppress ThymeleafVariablesResolveInspection -->
-<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<!--suppress ThymeleafVariablesResolveInspection -->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet" th:href="@{/css/tupian_ziyuan.css}">
 
 <head>
@@ -13,12 +15,13 @@
 <div class="blank"></div>
 <div class="navbar">
     <div class="logo">
-        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5_images/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.png" alt="Logo" />
+        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5_images/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.png"
+             alt="Logo"/>
         <h2>中国菜宣传</h2>
     </div>
 
     <div class="search">
-        <input type="text" placeholder="搜索" />
+        <input type="text" placeholder="搜索"/>
         <button class="weibo-btn">
             <i class="fab fa-weibo"></i>
         </button>
@@ -68,8 +71,7 @@
 </div>
 
 
-
-    <div id="myModel" class="model">
+<!--    <div id="myModel" class="model">
         <span class="close">&times;</span>
         <img class="model-content" id="img01">
     </div>
@@ -94,6 +96,63 @@
         </tr>
         </tbody>
     </table>
-    <script th:src="@{/js/tupian_ziyuan.js}"></script>
+    <script th:src="@{/js/tupian_ziyuan.js}"></script>-->
+
+
+<div class="kong"></div>
+
+<!--js效果部分-->
+<div id="myModel" class="model">
+    <span class="close">&times;</span>
+    <img class="model-content" id="img01">
+</div>
+
+<div class="ziyuan_1">
+    <div class="ziyuan_2">
+        <a href="#">
+            <div class="tupian"><img class="small-img"
+                                     src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%BA%90_images/chuancai.jpg">
+            </div>
+            <div class="wenzi">川菜</div>
+        </a>
+    </div>
+    <div class="ziyuan_2">
+        <a href="#">
+            <div class="tupian"><img
+                    src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%BA%90_images/dongbeicai.jpg">
+            </div>
+            <div class="wenzi">东北菜</div>
+        </a>
+    </div>
+    <div class="ziyuan_2">
+        <a href="#">
+            <div class="tupian"><img
+                    src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%BA%90_images/huicai.jpg"></div>
+            <div class="wenzi">徽菜</div>
+        </a>
+    </div>
+    <div class="ziyuan_2">
+        <a href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%BA%90_images/chuancai.jpg">
+            <div class="tupian"><img
+                    src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%BA%90_images/lucai.jpg"></div>
+            <div class="wenzi">鲁菜</div>
+        </a>
+    </div>
+    <div class="ziyuan_2">
+        <a href="#">
+            <div class="tupian"><img
+                    src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%BA%90_images/mincai.jpg"></div>
+            <div class="wenzi">闽菜</div>
+        </a>
+    </div>
+    <div class="ziyuan_2">
+        <a href="#">
+            <div class="tupian"><img
+                    src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E8%B5%84%E6%BA%90_images/sucai.jpg"></div>
+            <div class="wenzi">苏菜</div>
+        </a>
+    </div>
+</div>
+<script th:src="@{/js/tupian_ziyuan.js}"></script>
 </body>
 </html>
