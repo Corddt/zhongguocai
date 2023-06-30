@@ -100,7 +100,7 @@ public class WebController {
     @Autowired(required = false)
     private CityService cityService;
 
-    @RequestMapping("/city")
+    @RequestMapping("/chengshi")
     public String findAllCity(Model model) {
         List<City> cityList = cityService.findAllCity();
         for (City city : cityList)

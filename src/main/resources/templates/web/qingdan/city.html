@@ -1,10 +1,42 @@
 <!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
 <html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/tupian_ziyuan.css}">
 <head>
     <meta charset="UTF-8">
     <title>城市清单</title>
 </head>
 <body>
-<h1>目前毛都没有，需要前端页面引入替换此页面</h1>
+<div id="myModel" class="model">
+    <span class="close">&times;</span>
+    <img class="model-content" id="img01">
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>名称</th>
+        <th>城市历史</th>
+        <th>城市实景</th>
+        <th>年客流量(万)</th>
+        <th>年GDP(亿)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="city:${citylist}">
+        <td th:text="${city.id}"></td>
+        <td th:text="${city.mingcheng}"></td>
+        <td th:text="${city.lishi_year}"></td>
+        <td th:text="${city.tese}"></td>
+        <td>
+            <img class="small-img" th:src="${city.shijing}" alt="图片无法显示" />
+        </td>
+        <td th:text="${city.niankeliuliang_wan}"></td>
+        <td th:text="${city.GDP_yi}"></td>
+    </tr>
+    </tbody>
+</table>
+<script th:src="@{/js/tupian_ziyuan.js}"></script>
 </body>
 </html>
