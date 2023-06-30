@@ -152,4 +152,8 @@ public class WebController {
         return "web/qingdan/shicai";
     }
 
+    @RequestMapping("/index")
+    public String index(){
+        return "首页";
+    }
 }
