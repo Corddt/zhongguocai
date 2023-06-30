@@ -1,8 +1,11 @@
 package com.cupk.service.impl;
 
+import com.cupk.mapper.ChuanChengRenMapper;
 import com.cupk.mapper.MingDanMapper;
+import com.cupk.pojo.ChuanChengRen;
 import com.cupk.pojo.MingDan;
 import com.cupk.service.MingDanService;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -23,7 +26,22 @@ public class MingDanServiceImpl implements MingDanService {
     @Autowired(required = false)
     private MingDanMapper mingDanMapper;
     @Override
-    public List<MingDan> findAllMingDan() {
-        return mingDanMapper.findAllMingDan();
+    public List<MingDan> findAll(int page, int size) {
+        page = Math.max(1, page);
+        size = Math.max(1, size);
+        PageHelper.startPage(page, size);
+        return mingDanMapper.findAll((page - 1) * size, size);
+    }
+
+    @Override
+    public int countPages(int size) {
+        long count = mingDanMapper.count();
+        return (int) Math.ceil((double) count / size);
+    }
+
+    @Override
+    public int calculateTotalPages(int size) {
+        long count = mingDanMapper.count();
+        return (int) Math.ceil((double) count / size);
     }
 }
