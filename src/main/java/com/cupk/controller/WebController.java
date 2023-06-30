@@ -156,4 +156,20 @@ public class WebController {
     public String index(){
         return "首页";
     }
+    @RequestMapping("/info")
+    public String info(){
+        return "web/zixun/info";
+    }
+    @RequestMapping("/info_news")
+    public String info_news(){
+        return "web/zixun/info_news";
+    }
+    @RequestMapping("/info_notification")
+    public String info_notification(){
+        return "web/zixun/info_notification";
+    }
+    @RequestMapping("/info_reports")
+    public String info_reports(){
+        return "web/zixun/info_reports";
+    }
 }
