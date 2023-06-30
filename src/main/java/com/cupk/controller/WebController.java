@@ -78,7 +78,7 @@ public class WebController {
     private ChuanChengRenService chuanChengRenService;
 
     @RequestMapping("/chuanchengren")
-    public String index(Model model,
+    public String chuanchengren(Model model,
                         @RequestParam(defaultValue = "0") int page,
                         @RequestParam(defaultValue = "3") int size) {
 
@@ -110,15 +110,24 @@ public class WebController {
     }
 
 
-    //清单中的公开的中国菜名单的子页面
+    //这是清单里面的名单子页面
     @Autowired(required = false)
     private MingDanService mingDanService;
 
     @RequestMapping("/mingdan")
-    public String findAllMingDan(Model model){
-        List<MingDan> mingDanList = mingDanService.findAllMingDan();
-        System.out.println(mingDanList);
-        model.addAttribute("mingdanlist",mingDanList);
+    public String mingdan(Model model,
+                        @RequestParam(defaultValue = "0") int page,
+                        @RequestParam(defaultValue = "3") int size) {
+
+        page = Math.max(1, page);
+        size = Math.max(1, size);
+        int totalPages = mingDanService.countPages(size);
+        List<MingDan> mingDanList = mingDanService.findAll(page, size);
+        model.addAttribute("mingdanlist", mingDanList);
+
+        model.addAttribute("page", page);
+        model.addAttribute("size", size);
+        model.addAttribute("totalPages", totalPages);
         return "web/qingdan/mingdan";
     }
 }

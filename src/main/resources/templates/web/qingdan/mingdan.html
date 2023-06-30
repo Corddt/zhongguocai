@@ -7,6 +7,19 @@
     <title>中国菜首次公开名单</title>
     <link rel="stylesheet" href="css/高分菜单.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+    <!-- 引入自定义 CSS -->
+    <style>
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -116,28 +129,78 @@
     <button onclick="search()" style="height:30px;">搜索</button>
 </div><!-- 下拉菜单栏和搜索 -->
 <script src="js/高分菜谱.js"></script>
-<table>
-    <thead>
-    <tr>
-        <th>编号</th>
-        <th>名称</th>
-        <th>菜系</th>
-        <th>地区</th>
-        <th>价格</th>
-        <th>主要配料</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="mingdan,mingdanStat:${mingdanlist}">
-        <td th:text="${mingdan.id}"></td>
-        <td th:text="${mingdan.mingcheng}"></td>
-        <td th:text="${mingdan.caixi}"></td>
-        <td th:text="${mingdan.diqu}"></td>
-        <td th:text="${mingdan.jiage}"></td>
-        <td th:text="${mingdan.zhuyaopeiliao}"></td>
-    </tr>
-    </tbody>
-</table>
+
+<div class="container mt-3">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>菜系</th>
+            <th>地区</th>
+            <th>价格</th>
+            <th>主要配料</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="mingdan,mingdanStat:${mingdanlist}">
+            <td th:text="${mingdan.id}"></td>
+            <td th:text="${mingdan.mingcheng}"></td>
+            <td th:text="${mingdan.caixi}"></td>
+            <td th:text="${mingdan.diqu}"></td>
+            <td th:text="${mingdan.jiage}"></td>
+            <td th:text="${mingdan.zhuyaopeiliao}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- 分页组件 -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item" th:class="${page != null and page == 1} ? 'disabled' : null">
+                <a class="page-link" th:href="${page != null and page == 1} ? '#' : '/zhongguocai/mingdan' + '?page=' + ${page != null ? page - 1 : 0} + '&size=' + ${size}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item" th:each="i : ${#numbers.sequence(1, totalPages)}" th:class="${page != null and page == i} ? 'active' : null">
+                <a class="page-link" th:href="@{/zhongguocai/mingdan(page=${i}, size=${size})}"><span th:text="${i}"></span></a>
+            </li>
+            <li class="page-item" th:class="${page != null and page != totalPages} ? 'disabled' : null">
+                <a class="page-link" th:href="${page != null and page != totalPages} ? '#' : '/zhongguocai/mingdan' + '?page=' + ${page != null ? page + 1 : 0} + '&size=' + ${size}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 跳转页码部分 -->
+    <div class="input-group mb-3">
+        <input type="number" id="pageInput" class="form-control" placeholder="页码" min="1" th:max="${totalPages}">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="goToPage()">跳转</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- 引入 jQuery 和 Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- 自定义 JS -->
+<script>
+    function goToPage() {
+        var totalPages = [[${totalPages}]];
+        var size = [[${size}]];
+        var pageInput = document.getElementById('pageInput').value;
+
+        if (pageInput >= 1 && pageInput <= totalPages) {
+            window.location.href = '/zhongguocai/mingdan?page=' + (pageInput) + '&size=' + size;
+        }
+    }
+</script>
 
 
 </body>
