@@ -160,6 +160,12 @@ public class WebController {
         return "web/qingdan/shicai";
     }
 
+    //这是资源里面的H5赏析子页面
+    @RequestMapping("/h5")
+    public String h5() {
+        return "web/ziyuan/H5_ziyuan";
+    }
+
     @RequestMapping("/index")
     public String index(){
         return "首页";
@@ -180,4 +186,5 @@ public class WebController {
     public String info_reports(){
         return "web/zixun/info_reports";
     }
+
 }
