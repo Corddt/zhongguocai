@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+}
 .tablecss{
     text-align: center;
     border: 1px solid;
@@ -80,9 +85,10 @@
     box-sizing: border-box;
 }
 
-.navbar,
-.menu {
-    position: fixed;
+.navbar, .menu {
+    position: relative;
+    display:flex;
+    /*display:block;*/
     left: 0;
     width: 100%;
     /* 使得导航栏宽度占满整个视窗 */
@@ -90,14 +96,13 @@
     /* 设置一个高的z-index值，使得导航栏始终在其他内容之上 */
     background-color: rgba(128, 128, 128, 0.5);
     color: #fff;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar {
     top: 0;
-    height: 80px;
+    height: 60px;
     box-shadow: 0 1px 0 #fff;
     /* 在元素底部添加一个1px高的白色阴影 */
 }
@@ -148,17 +153,20 @@
 }
 
 .menu {
-    top: 80px;
+    /*top: 20px;*/
     /* 将top设为与.navbar的height一致，让.menu显示在.navbar的下方 */
+    display:block;
     padding: 10px 20px;
     height: 60px;
 }
 
 .menu ul {
     display: flex;
+    /*padding-inline-start:40px;*/
     list-style: none;
+    padding-left:10%;
     /*在导航栏中居中*/
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 .menu ul li {
@@ -206,4 +214,16 @@
     height: 4px;
     background-color: red;
     transition: all 0.3s ease;
+}
+.ziyuan_head{
+    display:flex;
+    top:10vh;
+    left:35vw;
+    position:relative;
+    height:20vh;
+    width:100vw;
+}
+.hbox{
+    margin-left:30px;
+    width:100px;
 }

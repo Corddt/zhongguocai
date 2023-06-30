@@ -24,7 +24,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/zhongguocai")
 public class WebController {
-    //资源中的图片子页面
     @Autowired(required = false)
     private TuPianService tuPianService;
 
@@ -37,8 +36,6 @@ public class WebController {
         return "web/ziyuan/tupian_ziyuan";
     }
 
-
-    //资源中的影像子页面
     @Autowired(required = false)
     private YingXiangService yingXiangService;
 
@@ -61,7 +58,7 @@ public class WebController {
                         @RequestParam(defaultValue = "5") int size) {
 
         List<CaiPu> caiPuList = caiPuService.findAll(page, size);
-        System.out.println(caiPuList);
+//        System.out.println(caiPuList);
         int totalPages = caiPuService.countPages(size);
 //        System.out.println(size + "   " + totalPages);
         for (CaiPu caipu : caiPuList) {
@@ -71,11 +68,9 @@ public class WebController {
         model.addAttribute("page", page);
         model.addAttribute("size", size);
         model.addAttribute("totalPages", totalPages);
-        return "web/qingdan/caipu";
+        return "index";
     }
 
-
-    //清单中的城市子页面
     @Autowired(required = false)
     private CityService cityService;
 
@@ -88,8 +83,6 @@ public class WebController {
         return "web/qingdan/city";
     }
 
-
-    //清单中的公开的中国菜名单的子页面
     @Autowired(required = false)
     private MingDanService mingDanService;
 
