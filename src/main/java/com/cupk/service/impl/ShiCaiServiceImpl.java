@@ -5,6 +5,8 @@ import com.cupk.pojo.ShiCai;
 import com.cupk.service.ShiCaiService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,6 +18,8 @@ import java.util.List;
  * @author:zjf
  * @datatime:2023-06-30 16:56
  */
+@Service
+@Primary
 public class ShiCaiServiceImpl implements ShiCaiService {
     @Autowired(required = false)
     private ShiCaiMapper shiCaiMapper;
