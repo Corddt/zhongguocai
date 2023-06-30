@@ -4,7 +4,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>国内外高分菜谱</title>
+    <title>中国菜传承人名单</title>
     <!-- 引入 Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- 引入自定义 CSS -->
@@ -25,22 +25,26 @@
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>菜名</th>
-            <th>介绍</th>
-            <th>配料</th>
-            <th>做法</th>
-            <th>成本</th>
-            <th>评分</th>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>民族</th>
+            <th>身份</th>
+            <th>所属菜系</th>
+            <th>擅长菜</th>
+            <th>所属地区</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="caipu : ${caiPus}"><!--<tr th:each="tupian,tupianStat:${tupianlist}">-->
-            <td th:text="${caipu.caiming}"></td>
-            <td th:text="${caipu.jieshao}"></td>
-            <td th:text="${caipu.peiliao}"></td>
-            <td th:text="${caipu.zuofa}"></td>
-            <td th:text="${caipu.chengben}"></td>
-            <td th:text="${caipu.pingfen}"></td>
+        <tr th:each="chuanchengren : ${chuanchengrenlist}"><!--<tr th:each="tupian,tupianStat:${tupianlist}">-->
+            <td th:text="${chuanchengren.id}"></td>
+            <td th:text="${chuanchengren.xingming}"></td>
+            <td th:text="${chuanchengren.xingbie}"></td>
+            <td th:text="${chuanchengren.minzu}"></td>
+            <td th:text="${chuanchengren.shenfen}"></td>
+            <td th:text="${chuanchengren.caixi}"></td>
+            <td th:text="${chuanchengren.caiming}"></td>
+            <td th:text="${chuanchengren.diqu}"></td>
         </tr>
         </tbody>
     </table>
@@ -49,15 +53,15 @@
     <nav aria-label="Page navigation">
         <ul class="pagination">
             <li class="page-item" th:class="${page != null and page == 1} ? 'disabled' : null">
-                <a class="page-link" th:href="${page != null and page == 1} ? '#' : '/zhongguocai/caipu' + '?page=' + ${page != null ? page - 1 : 0} + '&size=' + ${size}" aria-label="Previous">
+                <a class="page-link" th:href="${page != null and page == 1} ? '#' : '/zhongguocai/chuanchengren' + '?page=' + ${page != null ? page - 1 : 0} + '&size=' + ${size}" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             <li class="page-item" th:each="i : ${#numbers.sequence(1, totalPages)}" th:class="${page != null and page == i} ? 'active' : null">
-                <a class="page-link" th:href="@{/zhongguocai/caipu(page=${i}, size=${size})}"><span th:text="${i}"></span></a>
+                <a class="page-link" th:href="@{/zhongguocai/chuanchengren(page=${i}, size=${size})}"><span th:text="${i}"></span></a>
             </li>
             <li class="page-item" th:class="${page != null and page != totalPages} ? 'disabled' : null">
-                <a class="page-link" th:href="${page != null and page != totalPages} ? '#' : '/zhongguocai/caipu' + '?page=' + ${page != null ? page + 1 : 0} + '&size=' + ${size}" aria-label="Next">
+                <a class="page-link" th:href="${page != null and page != totalPages} ? '#' : '/zhongguocai/chuanchengren' + '?page=' + ${page != null ? page + 1 : 0} + '&size=' + ${size}" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>
@@ -87,7 +91,7 @@
         var pageInput = document.getElementById('pageInput').value;
 
         if (pageInput >= 1 && pageInput <= totalPages) {
-            window.location.href = '/zhongguocai/caipu?page=' + (pageInput - 1) + '&size=' + size;
+            window.location.href = '/zhongguocai/chuanchengren?page=' + (pageInput - 1) + '&size=' + size;
         }
     }
 </script>

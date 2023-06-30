@@ -52,11 +52,12 @@ public class WebController {
     }
 
 
+    //这是清单中的菜谱子页面
     @Autowired(required = false)
     private CaiPuService caiPuService;
 
     @RequestMapping("/caipu")
-    public String index(Model model,
+    public String caipufenye(Model model,
                         @RequestParam(defaultValue = "0") int page,
                         @RequestParam(defaultValue = "3") int size) {
 
@@ -72,6 +73,26 @@ public class WebController {
         return "web/qingdan/caipu";
     }
 
+    //这是清单里面的传承人子页面
+    @Autowired(required = false)
+    private ChuanChengRenService chuanChengRenService;
+
+    @RequestMapping("/chuanchengren")
+    public String index(Model model,
+                        @RequestParam(defaultValue = "0") int page,
+                        @RequestParam(defaultValue = "3") int size) {
+
+        page = Math.max(1, page);
+        size = Math.max(1, size);
+        int totalPages = chuanChengRenService.countPages(size);
+        List<ChuanChengRen> chuanChengRenList = chuanChengRenService.findAll(page, size);
+        model.addAttribute("chuanchengrenlist", chuanChengRenList);
+
+        model.addAttribute("page", page);
+        model.addAttribute("size", size);
+        model.addAttribute("totalPages", totalPages);
+        return "web/qingdan/chuanchengren";
+    }
 
 
 
