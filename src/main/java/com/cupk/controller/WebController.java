@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -129,6 +130,13 @@ public class WebController {
         model.addAttribute("size", size);
         model.addAttribute("totalPages", totalPages);
         return "web/qingdan/mingdan";
+    }
+
+    @GetMapping("/zhongguocai/mingdan/search")
+    public String search(@RequestParam String keyword, Model model) {
+        List<MingDan> result = mingDanService.search(keyword);
+        model.addAttribute("mingdanlist", result);
+        return "mingdan";
     }
 
     //这是清单里面的食材子页面

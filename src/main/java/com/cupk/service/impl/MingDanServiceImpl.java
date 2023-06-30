@@ -44,4 +44,9 @@ public class MingDanServiceImpl implements MingDanService {
         long count = mingDanMapper.count();
         return (int) Math.ceil((double) count / size);
     }
+
+    @Override
+    public List<MingDan> search(String keyword) {
+        return mingDanMapper.search(keyword);
+    }
 }

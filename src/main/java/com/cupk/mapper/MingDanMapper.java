@@ -14,4 +14,7 @@ public interface MingDanMapper {
 
     @Select("SELECT COUNT(*) FROM mingdan")
     int count();
+
+    List<MingDan> search(@Param("keyword") String keyword);
+
 }
