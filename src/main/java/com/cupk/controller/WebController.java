@@ -24,6 +24,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/zhongguocai")
 public class WebController {
+    //资源中的图片子页面
     @Autowired(required = false)
     private TuPianService tuPianService;
 
@@ -36,6 +37,8 @@ public class WebController {
         return "web/ziyuan/tupian_ziyuan";
     }
 
+
+    //资源中的影像子页面
     @Autowired(required = false)
     private YingXiangService yingXiangService;
 
@@ -54,23 +57,25 @@ public class WebController {
 
     @RequestMapping("/caipu")
     public String index(Model model,
-                        @RequestParam(defaultValue = "0") int page,
-                        @RequestParam(defaultValue = "5") int size) {
+                        @RequestParam(defaultValue = "1") int page,
+                        @RequestParam(defaultValue = "3") int size) {
 
-        List<CaiPu> caiPuList = caiPuService.findAll(page, size);
-//        System.out.println(caiPuList);
+        page = Math.max(1, page);
+        size = Math.max(1, size);
         int totalPages = caiPuService.countPages(size);
-//        System.out.println(size + "   " + totalPages);
-        for (CaiPu caipu : caiPuList) {
-            System.out.println(caipu.getId() + " " + caipu.getChengben() + " " + caipu.getPingfen() + " ");
-        }
+        List<CaiPu> caiPuList = caiPuService.findAll(page, size);
         model.addAttribute("caiPus", caiPuList);
+
         model.addAttribute("page", page);
         model.addAttribute("size", size);
         model.addAttribute("totalPages", totalPages);
-        return "index";
+        return "web/qingdan/caipu";
     }
 
+
+
+
+    //清单中的城市子页面
     @Autowired(required = false)
     private CityService cityService;
 
@@ -83,6 +88,8 @@ public class WebController {
         return "web/qingdan/city";
     }
 
+
+    //清单中的公开的中国菜名单的子页面
     @Autowired(required = false)
     private MingDanService mingDanService;
 
