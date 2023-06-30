@@ -36,13 +36,15 @@
         </thead>
         <tbody>
         <tr th:each="shicai : ${shicailist}"><!--<tr th:each="tupian,tupianStat:${tupianlist}">-->
-            <td th:text="${chuanchengren.id}"></td>
-            <td th:text="${chuanchengren.mingcheng}"></td>
-            <td th:text="${chuanchengren.jieshao}"></td>
-            <td th:text="${chuanchengren.tupian}"></td>
-            <td th:text="${chuanchengren.jiage}"></td>
-            <td th:text="${chuanchengren.tidai}"></td>
-            <td th:text="${chuanchengren.changjiandu}"></td>
+            <td th:text="${shicai.id}"></td>
+            <td th:text="${shicai.mingcheng}"></td>
+            <td th:text="${shicai.jieshao}"></td>
+            <td>
+                <img th:src="${shicai.tupian}" alt="图片无法显示" />
+            </td>
+            <td th:text="${shicai.jiage}"></td>
+            <td th:text="${shicai.tidai}"></td>
+            <td th:text="${shicai.changjiandu}"></td>
         </tr>
         </tbody>
     </table>
