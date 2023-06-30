@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_css/%E9%A6%96%E9%A1%B5.css">
+    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_css/info.css">
+    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_css/%E9%A1%B5%E9%9D%A28.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_js/jquery-3.7.0.min.js"></script>
+    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_js/info.js"></script>
+    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_js/slick.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5%E7%B4%A0%E6%9D%90_final_pictures/%E5%9B%BE%E6%A0%87.png
+    " alt="Logo" />
+                <h2>中国菜宣传</h2>
+            </div>
+    
+            <div class="search">
+                <input type="text" placeholder="搜索" />
+                <button class="weibo-btn">
+                    <i class="fab fa-weibo"></i>
+                </button>
+            </div>
+        </div>
+    
+        <div class="menu">
+            <ul>
+                <li id="home" class="menu-item"><a href="首页.html">首页</a></li>
+                <li class="menu-item"><a href="#">机构</a></li>
+                <li class="menu-item"><a href="#">政策</a></li>
+                <li class="dropdown menu-item">
+                    <a href="web/zixun/info.html">资讯</a>
+                    <div class="dropdown-menu">
+                        <a href="web/zixun/info_news.html">新闻动态</a>
+                        <a href="web/zixun/info_reports.html">专题报道</a>
+                        <a href="web/zixun/info_notification.html">通知公告</a>
+                    </div>
+                </li>
+                <li class="dropdown menu-item">
+                    <a href="#">清单</a>
+                    <div class="dropdown-menu">
+                        <a href="web/qingdan/caipu.html">国内外高分菜谱</a>
+                        <a href="web/qingdan/chuanchengren.html">中国菜传承人名单</a>
+                        <a href="web/qingdan/city.html">中国美食之都(包括5座联合国官方承认)</a>
+                        <a href="web/qingdan/shicai.html">中国菜典型食材特点及可替代品名单</a>
+                        <a href="web/qingdan/mingdan.html">中国菜首次公开名单</a>
+                    </div>
+                </li>
+                <li class="dropdown menu-item">
+                    <a href="#">资源</a>
+                    <div class="dropdown-menu">
+                        <a href="web/ziyuan/yingxiang_ziyuan.html">影像</a>
+                        <a href="web/ziyuan/tupian_ziyuan.html">美食图集</a>
+                        <a href="#">#H5鉴赏</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#">论坛</a></li>
+                <li class="menu-item"><a href="#">知识窗</a></li>
+            </ul>
+            <div class="slider" id="slider"></div>
+        </div>
+
+
+    <!-- 第三个页面 -->
+    <div id="info" class="info-container">
+        <div class="mianbao-mod" style="z-index:1;"><!--面包屑导航-->
+            <div class="kong-wrap">
+                <div class="mianbao-item"><a class="mianbao-a" href="./首页.html">首页</a></div>
+                <div class="mianbao-item"><a class="mianbao-a" href="./info.html">资讯</a> </div>
+            </div>
+        </div>
+
+        <div class="zixunjianjie"><!--资讯简介-->
+            <div class="kong-wrap">
+                <div class="box-s">
+                    <div class="title1">资讯简介</div>
+                </div>
+
+                <div class="zixuncontent " >
+                    <div class="zixunimg">
+                        <div class="zixunimg1 block1">
+                            <div class="img">
+                                <a href="https://www.toutiao.com/article/7240755850111894051/?channel=&source=news" target="_blank">
+                                    <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/info1.jpg" alt="" title="">
+                                    <!--<div class="mask"
+                                        style="background-image: url(/images/);"></div>-->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zixuntxt">
+                        <div class="zixuntxt1 cur">
+                            <div class="zixuntitle"><a href="https://www.toutiao.com/article/7240755850111894051/?channel=&source=search_tab" target="_blank" style="hover {color: #9a2929;}"
+                                    >舌尖上的中国菜——浅论全国各地的特色美食</a></div>
+
+                            <div class="zixuntxt11">
+                                <div style="font-size: 16px;">
+                                    中国的饮食文化源远流长。明末清初中国已形成川菜、鲁菜、淮扬菜、粤菜四大菜系，到了清末已形成川、鲁、粤、苏、浙、闽、湘、徽八大菜系。事实上中国还有很多八大菜系之外的美食。中国饮食文化之多元丰富可以说是全世界没任何一个国家比得上的。中国疆域辽阔文化多元：各地都有一些独特的风俗习惯，那么各地的饮食文化其实也是各具特色。有些吃货去外地旅行总是要遍访各种美食。接下来我们就看看中国具体有哪些美食。
+                                </div>
+                                <div class="data">2022.07.15</div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="xinwen"><!--新闻动态-->
+            <div class="kong-wrap">
+                <div class="box-s">
+                    <div class="title1">新闻动态</div>
+                </div>
+
+                <div class="xiwencontent">
+                    <div class="xiwencontent1">
+                        <div class="xinwentitle">
+                            <div class="xinwentitle11">
+                                <div>国宴风光</div>
+                            </div>
+                        </div>
+                        <div class="unorderlist">
+                            <div class="listitem">
+                                <div class="zixuntitle"><a title="历史的积淀，看中国十大名菜"
+                                        href="https://www.toutiao.com/article/6971796686192673319/?channel=&source=news"
+                                        target="_blank">历史的积淀，看中国十大名菜</a></div>
+                                <div class="data">2021-06-09 22:38</div>
+
+                            </div>
+                            <div class="listitem">
+                                <div class="zixuntitle"><a title="新时代中国菜留洋海外，哪些最受欢迎？"
+                                        href="https://www.toutiao.com/article/6740434925381485064/?channel=&source=news"
+                                        target="_blank">新时代中国菜留洋海外，哪些最受欢迎？</a></div>
+                                <div class="data">2019-09-25 10:50</div>
+
+                            </div>
+                            <div class="listitem">
+                                <div class="zixuntitle"><a title="路在何方，中国菜的创新从未停下脚步"
+                                        href="https://www.toutiao.com/article/7017754823609139719/?channel=&source=news"
+                                        target="_blank">路在何方，中国菜的创新从未停下脚步</a></div>
+                                <div class="data">2021-10-11 18:53</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xiwencontent1">
+                        <div class="xinwentitle">
+                            <div class="xinwentitle11">
+                                <div>地方特色</div>
+                            </div>
+                        </div>
+
+                        <div class="unorderlist">
+                            <div class="listitem">
+                                <div class="zixuntitle"><a title="十道勾魂川菜制作，神仙下凡也站不稳"
+                                        href="https://www.toutiao.com/article/6714081518525874700/?channel=&source=news"
+                                        target="_blank">十道勾魂川菜制作，神仙下凡也站不稳</a></div>
+                                <div class="data">2019-07-16 10:25</div>
+                            </div>
+                            <div class="listitem">
+                                <div class="zixuntitle"><a title="为一口美食，赶赴一座城！访一方风情，寻鲁菜最初的味道"
+                                        href="https://www.toutiao.com/article/6747488978556944910/?channel=&source=news"
+                                        target="_blank">为一口美食，赶赴一座城！访一方风情，寻鲁菜最初的味道</a></div>
+                                <div class="data">2019-10-14</div>
+
+                            </div>
+                            <div class="listitem">
+                                <div class="zixuntitle"><a title="七道徽州名菜，七个动人故事，这些菜肴里藏着一部部徽菜史!"
+                                        href="https://www.toutiao.com/article/6773526872543199757/?channel=&source=search_tab"
+                                        target="_blank">七道徽州名菜，七个动人故事，这些菜肴里藏着一部部徽菜史!</a></div>
+                                <div class="data">2019-12-23</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="textcenter">
+                    <div class="b16"><a href="./info_news.html">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="zuanti"><!--专题报道-->
+            <div class="kong-wrap">
+                <div class="box-s">
+                    <div class="title1">专题报道</div>
+                </div>
+
+                <div class="zuanticontent">
+                    <div>
+                        <div class="huadong">
+                            <div class="huadongcontent">
+
+                                <div class="img imgsuofang"><a
+                                        href="https://www.toutiao.com/article/7236958722642215463/?channel=&source=news"
+                                        target="_blank"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/1.jpg" alt="" title=""></a></div>
+                                <div class="zixuntxt11">
+                                    <div class="zixuntitle"><a
+                                            href="https://www.toutiao.com/article/7236958722642215463/?channel=&source=news"
+                                            target="_blank"
+                                            title="运河美食·江苏丨江湖河鲜丰饶，运河送来淮扬菜与大闸蟹">运河美食·江苏丨江湖河鲜丰饶，运河送来淮扬菜与大闸蟹</a></div>
+                                    <div class="date">2023-05-25</div>
+                                </div>
+                            </div>
+                            <div class="huadongcontent">
+
+                                <div class="img imgsuofang"><a
+                                        href="https://www.toutiao.com/article/7236957149123838522/?channel=&source=news"
+                                        target="_blank"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/2.jpg" alt="" title=""></a></div>
+                                <div class="zixuntxt11">
+                                    <div class="zixuntitle"><a
+                                            href="https://www.toutiao.com/article/7236957149123838522/?channel=&source=news"
+                                            target="_blank"
+                                            title="运河美食·天津丨狗不理、嘎巴菜，津菜津宴唤醒一天精气神">运河美食·天津丨狗不理、嘎巴菜，津菜津宴唤醒一天精气神</a>
+                                    </div>
+                                    <div class="date">2023-05-25</div>
+                                </div>
+                            </div>
+                            <div class="huadongcontent">
+                                <div class="img imgsuofang"><a
+                                        href="https://www.toutiao.com/article/7222944242883265081/?channel=&source=news"
+                                        target="_blank"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/3.png " alt="" title=""></a></div>
+                                <div class="zixuntxt11">
+                                    <div class="zixuntitle"><a
+                                            href="https://www.toutiao.com/article/7222944242883265081/?channel=&source=news"
+                                            target="_blank" title="南宁：非遗美食飘香 食客大快朵颐">南宁：非遗美食飘香 食客大快朵颐</a></div>
+                                    <div class="date">2023-04-17 </div>
+                                </div>
+                            </div>
+                            <div class="huadongcontent">
+                                <div class="img imgsuofang"><a
+                                        href="https://www.toutiao.com/article/7244711903346409995/?channel=&source=news"
+                                        target="_blank"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/4.png " alt="" title=""></a>
+                                </div>
+                                <div class="zixuntxt11">
+                                    <div class="zixuntitle"><a
+                                            href="https://www.toutiao.com/article/7244711903346409995/?channel=&source=news"
+                                            target="_blank" title="“沉浸式”美食之旅——带你品味舌尖上的喀什">“沉浸式”美食之旅——带你品味舌尖上的喀什</a>
+                                    </div>
+                                    <div class="date">2023-06-15</div>
+                                </div>
+                            </div>
+                            <div class="huadongcontent">
+                                <div class="img imgsuofang"><a
+                                        href="https://www.toutiao.com/article/7248248434057265719/?channel=&source=news"
+                                        target="_blank"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/5.jpg" alt="" title=""></a></div>
+                                <div class="zixuntxt11">
+                                    <div class="zixuntitle"><a
+                                            href="https://www.toutiao.com/article/7248248434057265719/?channel=&source=news"
+                                            target="_blank" title="肉香飘出海外！他们用美食讲述东坡的惠州故事">肉香飘出海外！他们用美食讲述东坡的惠州故事</a>
+                                    </div>
+                                    <div class="date">2023-06-24</div>
+                                </div>
+                            </div>
+                            <div class="huadongcontent">
+                                <div class="img imgsuofang"><a
+                                        href="https://www.toutiao.com/article/7230297069628916264/?channel=&source=news"
+                                        target="_blank"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/6.png" alt="" title=""></a></div>
+                                <div class="zixuntxt11">
+                                    <div class="zixuntitle"><a
+                                            href="https://www.toutiao.com/article/7230297069628916264/?channel=&source=news"
+                                            target="_blank"
+                                            title="中国菜登上查尔斯加冕礼，背后的“皇室华裔御厨”什么来头">中国菜登上查尔斯加冕礼，背后的“皇室华裔御厨”什么来头</a></div>
+                                    <div class="date">2023-05-07</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-nav"></div>
+                </div>
+
+                <div class="textcenter">
+                    <div class="chakan b16"><a href="./info_reports.html">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tongzhi"><!--通知公告-->
+            <div class="kong-wrap">
+                <div class="box-s">
+                    <div class="title1">通知公告</div>
+                </div>
+                <div>
+                    <div class="tongzhicontent">
+                        <div class="xiwencontent1">
+                            <div class="zixuntitle"><a href="https://www.toutiao.com/article/6753165876582679048/?channel=&source=search_tab" target="_blank"
+                                    title="关于《“中国菜”体系建设纲要指导意见》的发表">关于《“中国菜”体系建设纲要指导意见》的发表</a></div>
+                            <div >
+                                中新网眉山10月29日电 (严易梦 刘忠俊
+                                郭寒)2019“中国菜”艺术节暨川菜产业创新发展大会29日在四川眉山市举行，中国烹饪协会现场发布了《“中国菜”体系建设指导意见》(以下简称《意见》)，从“中国菜”的地域菜系体系、民族菜体系和品类菜体系三方面对“中国菜”做了全新全面的梳理。
+                            </div>
+                            <div class="date">2023.06.25</div>
+                        </div>
+                        <div class="xiwencontent1">
+                            <div class="zixuntitle"><a href="https://www.toutiao.com/article/7223365589111144994/?channel=&source=news" target="_blank"
+                                    title="为“菜”立法！《佛山市广府菜传承发展条例》5月1日实施">为“菜”立法！《佛山市广府菜传承发展条例》5月1日实施</a>
+                            </div>
+                            <div >
+                                佛山是岭南文化的发祥地，也是广府菜餐饮文化的重要发源地。4月18日，南都记者从新闻发布会上获悉，《佛山市广府菜传承发展条例》（以下简称《条例》）已经2023年3月30日广东省第十四届人民代表大会常务委员会第二次会议批准，将于2023年5月1日起实施。
+                            </div>
+                            <div class="date">2023.06.14</div>
+                        </div>
+                        <div class="xiwencontent1">
+                            <div class="zixuntitle"><a href="https://www.toutiao.com/article/6497400980508770829/?channel=&source=news" target="_blank"
+                                    title="全国首例！《福州市闽菜技艺文化保护规定》明年施行，将带来这些“福利”">全国首例！《福州市闽菜技艺文化保护规定》明年施行，将带来这些“福利”</a>
+                            </div>
+                            <div >
+                                为深入贯彻落实习近平总书记关于非物质文化遗产保护工作的重要指示批示精神，培养好传承人，一代一代接下来、传下去，让非物质文化遗产绽放出更加迷人的光彩，根据《中华人民共和国非物质文化遗产法》《山西省非物质文化遗产条例》《省级非物质文化遗产代表性传承人认定与管理办法》，山西省文化和旅游厅组织开展第六批省级...
+                            </div>
+                            <div class="date">2023.05.31</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="textcenter">
+                    <div class="chakan b16"><a href="./info_notification.html">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+</div>
+    
+
+
+<div class="section">
+    <div class="laoba">
+        <div class="zuohe"style="margin-top: 100px">
+            <div class="youqing" >友情链接</div><br><br>
+            <a href="http://www.ccas.com.cn/">中国烹饪协会</a><br><br>
+            <a href="https://tv.cctv.com/">央视网:美食中国</a><br><br>
+            <a href="https://www.meishichina.com/">美食天下</a><br><br>
+            <a href="https://tv.cctv.com/2017/01/19/VIDAtIyRXSWBaJGZ1itGdZFE170119.shtml">舌尖上的中国</a><br><br>
+            <a href="https://www.cupk.edu.cn/">中国石油大学（北京）克拉玛依校区</a>
+        </div>
+        <div class="youhe" style="margin-top: 100px">
+            地方美食网<br><br><br>
+            <a
+                href="https://topic.visitbeijing.com.cn/site/2018/S/foods/index.html">北京</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://travel.qunar.com/p-cs299957-tianjin-meishi">天津</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://baijiahao.baidu.com/s?id=1629084869466551788">河北</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/202603587_100014697">山西</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.163.com/dy/article/H7SR8TPI0552IASZ.html">内蒙古</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://zhuanlan.zhihu.com/p/441510651">辽宁</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://baijiahao.baidu.com/s?id=1715085040749619934">吉林</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/203276734_100040190">黑龙江</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://zhuanlan.zhihu.com/p/269648160">上海</a><br><br>
+            <a href="http://www.jsmsw.cc/">江苏</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/208793760_573793">浙江</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://zhuanlan.zhihu.com/p/428072292">安徽</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.xiangha.com/xiaochi/fujiansheng/">福建</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                href="https://www.sohu.com/a/204651250_100040190">江西</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://baijiahao.baidu.com/s?id=1717857331230543492">山东</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://uhenan.com/Delicious/Index">河南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.1797.com.cn/">湖北</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.hunmsw.cn/">湖南</a><br><br>
+            <a href="http://yjmeishi.net/pc/home/">广东</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://tv.cctv.com/yskd/wdzg/gxwd/index.shtml">广西</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/355886380_120146412">海南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.sjsdcq.com/">重庆</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.cwroom.com/wenhua/">四川</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://travel.qunar.com/p-sf297315-guizhou-meishi">贵州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://culture.yunnan.cn/food/">云南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                href="https://www.tibet3.com/lvyou/wcfq/ysh/2018-05-09/76473.html">西藏</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://dfz.shaanxi.gov.cn/sxts/mytc/">陕西</a><br><br>
+            <a href="https://zhuanlan.zhihu.com/p/432028350">甘肃</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.xiangha.com/xiaochi/qinghaisheng/">青海</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/198855996_100040190">宁夏</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.xinjiangnet.com.cn/mspd/">新疆</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="dilan">
+            <a href="">网站地图</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">版权与免责声明</a>
+            <br><br>
+            <span>建议使用360极速、Chrome、Firefox浏览器，最佳分辨率1920×1080</span>
+        </div>
+    </div>
+</div>
+
+
+
+    <script>
+        $(function () {
+
+            $('.zuanticontent .huadong').slick({
+                autoplay: true,
+                slidesToScroll: 3,
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 751,
+                        settings: {
+                            slidesToScroll: 1,
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+            
+        });
+    </script>
+
+
+</body>
+
+</html>
