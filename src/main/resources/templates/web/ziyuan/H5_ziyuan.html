@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" th:href="@{/css/H5_ziyuan.css}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5赏析</title>
+</head>
+<body>
+<!--    这下面是导航栏-->
+<!-- 导航栏 -->
+<div class="blank"></div>
+<div class="navbar">
+    <div class="logo">
+        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5_images/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.png"
+             alt="Logo"/>
+        <h2>中国菜宣传</h2>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="搜索"/>
+        <button class="weibo-btn">
+            <i class="fab fa-weibo"></i>
+        </button>
+    </div>
+</div>
+
+<div class="menu">
+    <ul>
+        <li id="home"><a href="#">首页</a></li>
+        <li><a href="#">机构</a></li>
+        <li class="dropdown">
+            <a href="#">资讯</a>
+            <div class="dropdown-menu">
+                <a href="#">#新闻动态</a>
+                <a href="#">#专题报告</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">清单</a>
+            <div class="dropdown-menu">
+                <a href="#">#国内外高分菜谱</a>
+                <a href="#">#中国菜传承人名单</a>
+                <a href="#">#中国美食之都(包括5座联合国官方承认)</a>
+                <a href="#">#中国菜典型食材特点及可替代品名单</a>
+                <a href="#">#中国菜首次公开名单</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">资源</a>
+            <div class="dropdown-menu">
+                <a href="#">#影像</a>
+                <a href="#">#美食图集</a>
+                <a href="#">#H5鉴赏</a>
+            </div>
+        </li>
+        <li><a href="#">论坛</a></li>
+        <li><a href="#">知识窗</a></li>
+    </ul>
+    <div class="slider" id="slider"></div>
+</div>
+
+
+<div id="info" class="info-container">
+    <div class="mianbao-mod" style="z-index:1;"><!--面包屑导航-->
+        <div class="kong-wrap">
+            <div class="mianbao-item"><a class="mianbao-a" href="./首页.html">首页</a></div>
+            <div class="mianbao-item"><a class="mianbao-a" href="./info.html">资源</a></div>
+        </div>
+    </div>
+
+    <div class="box1" id="ding">
+        <div class="kong-wrap">
+            <div class="box-s">
+                <div class="title1">资源</div>
+                <div class="title2">
+                    <a href="http://localhost:8888/zhongguocai/yingxiang" class="title22 title23">
+                        <div class="title231">影像</div>
+                    </a>
+                    <a href="http://localhost:8888/zhongguocai/tupian" class="title22 title23">
+                        <div class="title231">美食图集</div>
+                    </a>
+                    <a href="http://localhost:8888/zhongguocai/h5" class="title22 title23">
+                        <div class="title231">H5赏析</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="h5_box1">
+    <div class="h5_box2">
+        <a href="https://mp.weixin.qq.com/s/DY481YYlZJqkGUJLCVkqlw">
+            <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/h5_1.jpg">
+            <div class="wenzi">“7月不排毒，一年都会堵”，常见5种天然“排毒菜”，营养又便宜，无毒一身轻～</div>
+        </a>
+    </div>
+    <div class="h5_box2">
+        <a href="https://mp.weixin.qq.com/s/wuEIJ2e3sM41aGq_cZbKAw">
+            <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/h5_3.jpg">
+            <div class="wenzi">糖醋排骨，颜色好棒，味道好吃的停不下来！</div>
+        </a>
+    </div>
+    <div class="h5_box2">
+        <a href="https://mp.weixin.qq.com/s/bEtvjNtYu08EpR2OxxE10w">
+            <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/h5_2.jpg">
+            <div class="wenzi">自制豪华冰粉，凉爽甜滑，绝对美翻了！！</div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

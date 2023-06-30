@@ -12,12 +12,13 @@
 <!-- 导航栏 -->
 <div class="navbar">
     <div class="logo">
-        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5_images/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.png" alt="Logo" />
+        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5_images/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.png"
+             alt="Logo"/>
         <h2>中国菜宣传</h2>
     </div>
 
     <div class="search">
-        <input type="text" placeholder="搜索" />
+        <input type="text" placeholder="搜索"/>
         <button class="weibo-btn">
             <i class="fab fa-weibo"></i>
         </button>
@@ -68,7 +69,8 @@
     <img class="model-content" id="img01">
 </div>
 
-<table class="tablecss">
+
+<!--<table class="tablecss">
     <thead>
     <tr>
         <th>影像编号</th>
@@ -88,6 +90,85 @@
     </tr>
     </tbody>
 </table>
-<script th:src="@{/js/yingxiang_ziyuan.js}"></script>
+<script th:src="@{/js/yingxiang_ziyuan.js}"></script>-->
+<div id="info" class="info-container">
+    <div class="mianbao-mod" style="z-index:1;"><!--面包屑导航-->
+        <div class="kong-wrap">
+            <div class="mianbao-item"><a class="mianbao-a" href="./首页.html">首页</a></div>
+            <div class="mianbao-item"><a class="mianbao-a" href="./info.html">资源</a></div>
+        </div>
+    </div>
+
+    <div class="box1" id="ding">
+        <div class="kong-wrap">
+            <div class="box-s">
+                <div class="title1">资源</div>
+                <div class="title2">
+                    <a href="http://localhost:8888/zhongguocai/yingxiang" class="title22 title23">
+                        <div class="title231">影像</div>
+                    </a>
+                    <a href="http://localhost:8888/zhongguocai/tupian" class="title22 title23">
+                        <div class="title231">美食图集</div>
+                    </a>
+                    <a href="http://localhost:8888/zhongguocai/h5" class="title22 title23">
+                        <div class="title231">H5赏析</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--影像栏-->
+<div class="yingxiang_1">
+    <div class="yingxiang_2">
+        <a href="https://easylink.cc/gxog2q">
+            <div class="shipin"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/%E8%88%8C%E5%B0%96%E4%B8%8A%E7%9A%84%E4%B8%AD%E5%9B%BD1.png">
+                <div class="play"></div>
+            </div>
+            <div class="wenzi">舌尖上的中国</div>
+        </a>
+    </div>
+
+    <div class="yingxiang_2">
+        <a href="https://easylink.cc/wbgaax">
+            <div class="shipin"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/%E4%B8%AD%E5%9B%BD%E7%9A%84%E9%A5%AE%E9%A3%9F%E6%96%87%E5%8C%961.png">
+                <div class="play"></div>
+            </div>
+            <div class="wenzi">中国的饮食文化</div>
+        </a>
+    </div>
+
+    <div class="yingxiang_2">
+        <a href="https://easylink.cc/v7yv1f">
+            <div class="shipin"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/%E9%A3%8E%E5%91%B3%E4%BA%BA%E9%97%B41.png">
+                <div class="play"></div>
+            </div>
+            <div class="wenzi">风味人间</div>
+        </a>
+    </div>
+
+    <div class="yingxiang_2">
+        <a href="https://easylink.cc/co7eiw">
+            <div class="shipin"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/%E5%A4%A7%E5%9F%8E%E5%B0%8F%E5%91%B31.png">
+                <div class="play"></div>
+            </div>
+            <div class="wenzi">大城小味</div>
+        </a>
+    </div>
+
+
+    <div class="yingxiang_2">
+        <a href="https://easylink.cc/d5hw3m">
+            <div class="shipin"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%BD%B1%E5%83%8F%E8%A7%86%E9%A2%91%E7%9A%84%E5%AF%B9%E5%BA%94%E5%9B%BE%E7%89%87/%E5%85%AB%E5%A4%A7%E8%8F%9C%E7%B3%BB1.png">
+                <div class="play"></div>
+            </div>
+            <div class="wenzi">中国八大菜系</div>
+        </a>
+    </div>
+
+</div>
+
 </body>
 </html>

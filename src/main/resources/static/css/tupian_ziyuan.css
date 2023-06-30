@@ -1,23 +1,27 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     text-decoration: none;
-    color:black;
+    color: inherit;
 }
-.tablecss{
+
+.tablecss {
     text-align: center;
     border: 1px solid;
     width: 100%;
 }
-.tablecss th{
+
+.tablecss th {
     color: darkred;
     line-height: 30px;
 }
-.tablecss td{
+
+.tablecss td {
     font-size: 14px;
     line-height: 30px;
 }
-.tablecss img .small-img{
+
+.tablecss img .small-img {
     max-height: 30px;
     max-width: 100%;
     cursor: pointer;
@@ -37,7 +41,7 @@
     /* 设置高度为 100% 可以让模态窗口充满屏幕 */
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .model-content {
@@ -51,7 +55,7 @@
     /* 这将使图片有一定的透明度 */
     opacity: 0.7;
     /* 增加阴影效果 */
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
     /* 添加动画 */
     transition: transform 2s;
 }
@@ -60,7 +64,6 @@
 .model.show .modal-content {
     transform: translateY(-50%) scale(1.05);
 }
-
 
 
 .close {
@@ -72,6 +75,7 @@
     font-weight: bold;
     transition: 0.3s;
 }
+
 .close:hover, .close:focus {
     color: #bbb;
     text-decoration: none;
@@ -88,7 +92,7 @@
 
 .navbar, .menu {
     position: relative;
-    display:flex;
+    display: flex;
     /*display:block;*/
     left: 0;
     width: 100%;
@@ -156,7 +160,7 @@
 .menu {
     /*top: 20px;*/
     /* 将top设为与.navbar的height一致，让.menu显示在.navbar的下方 */
-    display:block;
+    display: block;
     padding: 10px 20px;
     height: 60px;
 }
@@ -165,7 +169,7 @@
     display: flex;
     /*padding-inline-start:40px;*/
     list-style: none;
-    padding-left:10%;
+    padding-left: 10%;
     /*在导航栏中居中*/
     /*margin: 0 auto;*/
 }
@@ -216,61 +220,185 @@
     background-color: red;
     transition: all 0.3s ease;
 }
-.ziyuan_head{              /*影像 美食图集 H5赏析选择*/
-    display:flex;
-    top:10vh;
-    height:10vh;
-    width:60vw;
+
+.ziyuan_head { /*影像 美食图集 H5赏析选择*/
+    display: flex;
+    top: 10vh;
+    height: 10vh;
+    width: 60vw;
 }
-.hbox{                         /*上文小框*/
-    line-height:100px;
-    margin:0 auto;
-    width:200px;
-    height:100px;
-    border:1px solid red;
+
+.hbox { /*上文小框*/
+    line-height: 100px;
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+    border: 1px solid red;
     text-align: center;
 }
 
-.ziyuan_1{
-    background-color:red;
-    /*position:relative;*/
-    width:1000px;
-    vertical-align: middle;
-    height:1100px;
-    /*left:10%;*/
-    margin:100px auto;
-}
-.ziyuan_2{
-    background-color:green;
-    display:inline-block;
-    width:300px;
-    height:500px;
-    margin-left:30px;
-    margin-bottom:30px;
-}
-.tupian img{
+.ziyuan_1 {
+    background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png14.png) repeat;
     position:relative;
-    height:400px;
-    width:300px;
+    width: 100vw;
+    vertical-align: middle;
+    height: 1100px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    border:2px solid black;
 }
-.wenzi{
-    height:100px;
+
+.ziyuan_3 {
+    background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png14.png) repeat;
+    /*display: inline-block;*/
+    /*position:absolute;*/
+    width: 30vw;
+    height: 500px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.tupian img {
+    position: relative;
+    height: 400px;
+    width: 300px;
+}
+
+.wenzi {
+    height: 100px;
     text-align: center;
-    margin:0 auto;
-    line-height:100px;
+    margin: 0 auto;
+    line-height: 100px;
 }
-.kong{
-    width:100vw;
-    height:15vh;
+
+
+/*题目部分*/
+@font-face {
+    font-family: 'wdzt';
+    src: url('../fonts/方正正中黑简体.ttf') format('truetype');
 }
-/*.tupian{*/
-/*    display:flex;*/
-/*    position:relative;*/
-/*    width:25vw;*/
-/*    height:30vh;*/
-/*}*/
-/*.wenzi{*/
-/*    display:flex;*/
-/*    position:relative;*/
-/*    margin-bottom:20px;*/
-/*}*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.info-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png14.png) repeat;
+}
+
+.kong-wrap {
+    position: relative;
+    width: 1270px;
+    height: 100%;
+    margin: auto;
+}
+
+.mianbao-item {
+    font: 14px/1.5 wdzt,
+    Arial,
+    Tahoma,
+    Helvetica,
+    sans-serif;
+    color: #333;
+    font-family: "微软雅黑";
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.mianbao-item:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: "→";
+}
+
+.box-s {
+    position: relative;
+    padding: 36px 0 40px;
+    font-family: 'wdzt';
+    text-align: center;
+}
+
+.title1 {
+    font: 14px/1.5 wdzt, Arial, Tahoma, Helvetica, sans-serif;
+    color: #333;
+    font-family: 'wdzt';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 44px;
+}
+
+.box-s .title1:before,
+.box-s .title1:after {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 44px;
+    vertical-align: top;
+    background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png7.png) no-repeat;
+}
+
+.box-s .title1:before {
+    background-position: left;
+    margin-right: 18px;
+}
+
+.box-s .title1:after {
+    background-position: right;
+    margin-left: 18px;
+}
+
+.title2 {
+    margin-top: 32px;
+}
+
+.box1 .box-s .title22 {
+    font: 14px/1.5 wdzt,
+    Arial,
+    Tahoma,
+    Helvetica,
+    sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    font-family: "微软雅黑";
+    vertical-align: middle;
+    overflow: hidden;
+    margin: 0 18px;
+}
+
+.box1 .box-s .title231 {
+    width: 170px;
+}
+
+.title23 .title231 {
+    background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png25.png) repeat-x;
+    line-height: 48px;
+}
+
+.title23.cur:before,
+.title23.cur:after,
+a.title23:hover:before,
+a.title23:hover:after {
+    background-image: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png24.png);
+}
+
+.title23.cur .title231,
+a.title23:hover .title231 {
+    background-image: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png26.png);
+}
+
+
+

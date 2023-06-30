@@ -170,7 +170,7 @@ a {
 
 .info-container {
     position: relative;
-    height: 300px;
+    height: 200px;
     width: 100%;
     background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png14.png) repeat;
 }
@@ -282,11 +282,11 @@ a.title23:hover .title231 {
     background-image: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png26.png);
 }
 
-/*影像盒子部分*/
-.yingxiang_1{
+/*H5展示部分*/
+.h5_box1{
     background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png14.png) repeat;
     width:100vw;
-    height:1200px;
+    height:800px;
     position:relative;
     display:flex;
     flex-wrap:wrap;
@@ -295,49 +295,23 @@ a.title23:hover .title231 {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /*border:2px solid black;*/
 }
 
-.yingxiang_2 .shipin{
-    /*background: url(https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/png14.png) repeat;*/
-    /*background-color:green;*/
+.h5_box2 img{
     width: 30vw;
-    height: 500px;
+    height: 450px;
     margin-left: 40px;
     margin-bottom: 10px;
     position:relative;
-    z-index:0;
+    /*z-index:0;*/
     border:2px solid black;
     overflow: hidden;
 }
 
-.yingxiang_2 .shipin img{
-/*    width:600px;
-    height:500px;*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    z-index:1;
-}
-
-.play{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%); /* 使用transform来使play居中 */
-    height:300px;
-    width:300px;
-    /*background-size: contain; !* 控制背景图片适应play的方式 *!*/
-    z-index: 2;
-    background:url("https://cupkcupk.oss-cn-beijing.aliyuncs.com/zc_one/%E6%92%AD%E6%94%BE%E6%8C%89%E9%92%AE.png") center no-repeat;
-}
 
 /*下方文字*/
 .wenzi{
-    line-height:100px;
+    line-height:200px;
     text-align: center;
     font-weight:bold;
     margin:0 auto;
