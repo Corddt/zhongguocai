@@ -57,7 +57,7 @@ public class WebController {
 
     @RequestMapping("/caipu")
     public String index(Model model,
-                        @RequestParam(defaultValue = "1") int page,
+                        @RequestParam(defaultValue = "0") int page,
                         @RequestParam(defaultValue = "3") int size) {
 
         page = Math.max(1, page);
