@@ -123,21 +123,34 @@ Java语言，IntelliJ IDEA集成环境
 
 ### 3.4.2 数据量测算
 
-需要分析对于数据采集、数据存储、数据处理与应用的需
+需要分析对于数据采集、数据存储、数据处理与应用的需求，测算数据处理量、存储量、传输流量，以及现值和未来3～5年的预测值。
 
-求，测算数据处理量、存储量、传输流量，以及现值和未来3～5年的预测值。
-
-本网站的数据主要是 用户信息， 菜名，介绍文本，食材，烹饪方法，菜品图片，论坛文章，视频和评论
+本网站的数据主要是 用户信息， 菜名，介绍文本，食材，烹饪方法，菜品图片，论坛文章，视频和评论。需要存储菜品信息表、用户信息表、评论信息表等，每个表的大小在几十MB到几百MB之间。
 
 ### 3.4.3 标准化需求
 
 分析本项目对于数据编码和信息标准化的需求。
+为了便于快速地查询和分析数据，定义表的数据结构：
+caipu:         id,caiming,pingfen,peiliao,zuofa,chengben,jieshao
+caixi:         name
+chuanchengren: id,xingming,xingbie,minzu,shenfen,caixi,caiming,diqu
+city:          id,mingcheng,lishi_year,tese,shijing,niankeliuliang,GDP_yi
+food_book:     id,name,ISBN,price,author,company,time
+mingdan:       id,mingcheng,caixi,diqu,jiage,zhuyaopeiliao
+shicai:        id,mingcheng,jieshao,tupian,jiage,tidai,changjiandu
+tupian:        id,timu,tupian,laiyuan
+yingxiang:     id,timu,yingxiang,shipinlaiyuan
+
+
 
 ## 3.5 功能需求
 
 描述系统功能需求，绘制系统功能框架图。这应包括：
 
 - 功能描述
+![输入图片说明](3.2%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E6%89%80%E7%94%A8%E5%9B%BE.png)
+
+
 - 业务流程
 - 数据流程
 - 界面原型
@@ -145,6 +158,7 @@ Java语言，IntelliJ IDEA集成环境
 ## 3.6 性能需求
 
 分析系统对处理能力、存储能力和传输能力等性能指标要求，包括容量、最大用户数、平均并发用户、响应时间、平均无故障时间等。分析系统对硬件设备的性能要求，如对设备可靠性（集群、双机热备份）的需求。
+处理能力：支持上万人同时在线访问
 
 ## 3.7 安全保密需求
 
