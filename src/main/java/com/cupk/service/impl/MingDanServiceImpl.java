@@ -46,7 +46,7 @@ public class MingDanServiceImpl implements MingDanService {
     }
 
     @Override
-    public List<MingDan> search(String keyword) {
-        return mingDanMapper.search(keyword);
+    public List<MingDan> findMingDanByStr(String searchStr) {
+        return mingDanMapper.findMingDanByStr(searchStr);
     }
 }

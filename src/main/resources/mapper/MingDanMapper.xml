@@ -6,14 +6,16 @@
     <select id="findAll" resultType="com.cupk.pojo.MingDan">
         SELECT * FROM mingdan LIMIT #{size} OFFSET #{page}
     </select>
-    <select id="search" resultType="com.cupk.pojo.MingDan">
-        SELECT * FROM mingdan WHERE
-            id LIKE CONCAT('%', #{keyword}, '%') OR
-            mingcheng LIKE CONCAT('%', #{keyword}, '%') OR
-            caixi LIKE CONCAT('%', #{keyword}, '%') OR
-            diqu LIKE CONCAT('%', #{keyword}, '%') OR
-            jiage LIKE CONCAT('%', #{keyword}, '%') OR
-            zhuyaopeiliao LIKE CONCAT('%', #{keyword}, '%')
+    <select id="findMingDanByStr" parameterType="java.lang.String" resultType="com.cupk.pojo.MingDan">
+        SELECT * FROM mingdan
+        WHERE 1=1
+        <if test="searchStr!=null and searchStr!=''">
+            and mingcheng like CONCAT('%',#{searchStr},'%')
+            and caixi like CONCAT('%',#{searchStr},'%')
+            and diqu like CONCAT('%',#{searchStr},'%')
+            and zhuyaopeiliao like CONCAT('%',#{searchStr},'%')
+        </if>
     </select>
+
 
 </mapper>

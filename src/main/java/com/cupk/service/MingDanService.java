@@ -9,6 +9,6 @@ public interface MingDanService {
     int countPages(int size);
     int calculateTotalPages(int size);
 
-    List<MingDan> search(String keyword);
+    List<MingDan> findMingDanByStr(String searchStr);
 
 }

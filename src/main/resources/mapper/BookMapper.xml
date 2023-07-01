@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cupk.mapper.BookMapper">
+    <select id="findAllBooks" resultType="com.cupk.pojo.Book">
+        select *
+        from food_book
+    </select>
+    <select id="findBookByID" resultType="com.cupk.pojo.Book">
+        select *
+        from food_book
+        where id=#{id}
+    </select>
+</mapper>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/foodbook.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>美食图书推荐</title>
+</head>
+<body>
+<table class="tablecss">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>名称</th>
+        <th>ISBN</th>
+        <th>作者</th>
+        <th>出版社</th>
+        <th>出版日期</th>
+        <th>价格</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book,bookStat:${blist}">
+        <td th:text="${bookStat.count}"></td>
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.ISBN}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.company}"></td>
+        <td th:text="${book.time}"></td>
+        <td th:text="${book.price}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

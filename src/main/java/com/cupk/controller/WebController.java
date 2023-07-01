@@ -132,12 +132,25 @@ public class WebController {
         return "web/qingdan/mingdan";
     }
 
-    @GetMapping("/zhongguocai/mingdan/search")
-    public String search(@RequestParam String keyword, Model model) {
-        List<MingDan> result = mingDanService.search(keyword);
-        model.addAttribute("mingdanlist", result);
-        return "mingdan";
+    @RequestMapping("/mingdan_findbystr")
+    public String findMingDanByStr(@RequestParam(value = "searchStr") String searchStr,Model model){
+        List<MingDan> mingDanList = mingDanService.findMingDanByStr(searchStr);
+
+        // Calculate totalPages
+        int totalPages = mingDanService.calculateTotalPages(3);
+
+        model.addAttribute("mingdanlist",mingDanList);
+
+        if (totalPages == 0) {
+            totalPages = 1;
+        }
+        model.addAttribute("totalPages", totalPages);
+
+        System.out.println("断点检测"+totalPages);
+        return "web/qingdan/mingdan";
     }
+
+
 
     //这是清单里面的食材子页面
     @Autowired(required = false)
@@ -159,6 +172,40 @@ public class WebController {
         model.addAttribute("totalPages", totalPages);
         return "web/qingdan/shicai";
     }
+
+    //这是book推荐的页面
+    @Autowired(required = false)
+    private BookService bookService;
+
+    //跳转到图书查询首页
+    @RequestMapping("/bookindex")
+    public String toIndex(){
+        return "web/tushu/bookindex";//访问bookindex.html
+    }
+
+    //跳转到图书插入页面
+    @RequestMapping("/toinsert")
+    public String toInsert(){
+        return "web/tushu/insertbook";//访问bookindex.html
+    }
+
+    //查询全部图书
+    @RequestMapping("/findall")
+    public String findAllBooks(Model model){
+        List<Book> bookList = bookService.findAllBooks();
+        System.out.println(bookList);
+        model.addAttribute("blist",bookList);//存储全部图书信息
+        return "web/tushu/booklist";
+    }
+
+    //根据图书编号查询图书
+    @GetMapping("/findbyid")
+    public Book findBookByID(@RequestParam(name = "id") Integer id){
+        Book book = bookService.findBookByID(id);
+        System.out.println(book);
+        return book;
+    }
+
 
     //这是资源里面的H5赏析子页面
     @RequestMapping("/h5")

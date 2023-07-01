@@ -78,23 +78,22 @@
 
 <div class="tongji"></div><!-- 数据统计 -->
 
-<style>
-    .centered-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
+<!--<style>-->
+<!--    .centered-container {-->
+<!--        display: flex;-->
+<!--        flex-direction: column;-->
+<!--        align-items: center;-->
+<!--        justify-content: center;-->
+<!--    }-->
+<!--</style>-->
 
-<div class="centered-container">
-    <div class="caidanlan">
-        &nbsp;&nbsp;
-        <input type="text" id="searchInput" style="height:30px;" placeholder="请输入查询内容">
-        &nbsp;
-        <button onclick="search()" style="height:30px;">搜索</button>
-    </div>
-</div>
+<!--<div class="centered-container">-->
+<!--    <form action="/zhongguocai/mingdan_findbystr" method="get">-->
+<!--        <input type="text" id="searchStr" style="height:30px;" name="searchStr" placeholder="请输入查询内容">-->
+<!--        <input type="submit" value="查询" onclick="search()">-->
+<!--    </form>-->
+
+<!--</div>-->
 
 
 <div class="container mt-3">
@@ -119,6 +118,8 @@
             <td th:text="${mingdan.zhuyaopeiliao}"></td>
         </tr>
         </tbody>
+        <button name="button" onclick="history.back()">返回上一页</button>
+        <button name="button" onclick="window.location.href = '/zhongguocai/index'">返回主页</button>
     </table>
     <!-- 分页组件 -->
     <nav aria-label="Page navigation">
@@ -170,8 +171,8 @@
 
     //搜索函数
     function search() {
-        var keyword = document.getElementById('searchInput').value;
-        window.location.href = '/zhongguocai/mingdan/search?keyword=' + keyword;
+        var searchStr = document.getElementById('searchStr').value;
+        window.location.href = '/zhongguocai/mingdan_findbystr?searchStr=' + searchStr;
     }
 
 </script>
