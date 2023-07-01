@@ -28,7 +28,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 
 </head>
+<style>
+    .logo2 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 1200px;
+        height: 200px;
+    }
 
+    .logo2 img {
+        margin-right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .qrcode {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: none;
+        z-index: 999;
+        transition-property: opacity;
+    }
+
+    .container:hover .qrcode {
+        opacity: 1;
+    }
+
+    .qrcode img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .qrcode-qq {
+        margin-left: 630px;
+        margin-top: 10px;
+    }
+
+    .qrcode-wechat {
+        margin-left: 680px;
+        margin-top: 10px;
+    }
+
+    .logo2 img:hover + .qrcode {
+        display: block;
+    }
+
+    .qrcode:hover {
+        display: block;
+    }
+
+    .logo2 img:hover {
+        opacity: 0.5;
+    }
+
+
+
+</style>
 <body>
 <!-- 导航栏 -->
 <div class="navbar">
@@ -36,14 +98,18 @@
         <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5%E7%B4%A0%E6%9D%90_final_pictures/%E5%9B%BE%E6%A0%87.png
 " alt="Logo"/>
         <h2>中国菜宣传</h2>
+        <div class="logo2">
+            <a href="index">
+                <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%9B%BE%E7%89%87/%E6%88%BF%E5%AD%90%E5%9B%BE%E6%A0%871.png" alt="房子">
+            </a>
+        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%9B%BE%E7%89%87/QQ%E5%9B%BE%E6%A0%871.png" alt="QQ">
+        <div class="qrcode qrcode-qq"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%9B%BE%E7%89%87/qq.png" alt="qq二维码"></div>
+        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%9B%BE%E7%89%87/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E6%A0%871.png" alt="wechat">
+        <div class="qrcode qrcode-wechat"><img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%9B%BE%E7%89%87/wechat.png" alt="微信二维码"></div>
     </div>
+</div>
 
-    <!--<div class="search">
-        <input type="text" placeholder="搜索" />
-        <button class="weibo-btn">
-            <i class="fab fa-weibo"></i>
-        </button>
-    </div>-->
+
 </div>
 
 <div class="menu">
@@ -155,7 +221,7 @@
                 <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5%E7%B4%A0%E6%9D%90_final_pictures/%E4%B9%A6.png
 ">
                 <div class="image-text">中<br>国<br>菜<br>首<br>次<br>公<br>开<br>名<br>单</div>
-                <div class="image-text2"><a href="#">加<br>载<br>更<br>多</a></div>
+                <div class="image-text2"><a href="mingdan">加<br>载<br>更<br>多</a></div>
             </div>
         </div>
     </div>
@@ -218,7 +284,8 @@
             <div class="yzt">中<br>国<br>菜<br>传<br>承<br>人</div>
             <div class="yi"><a href="https://zhuanlan.zhihu.com/p/337412673">楚菜卢永良··文化使美食更精彩，美食使文化更深远</a>
             </div>
-            <div class="er"><a href="https://epaper.scdaily.cn/shtml/scrb/20220111/267779.shtml">川菜张中尤··让川菜传统烹饪技艺代代流芳</a>
+            <div class="er"><a
+                    href="https://epaper.scdaily.cn/shtml/scrb/20220111/267779.shtml">川菜张中尤··让川菜传统烹饪技艺代代流芳</a>
             </div>
             <div class="san"><a href="http://sd.sina.com.cn/yantai/news/2022-07-14/city-yt-imizirav3370959.shtml">鲁菜尹力强··传世鲁菜&nbsp;一口入魂</a>
             </div>

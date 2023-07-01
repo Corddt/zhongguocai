@@ -16,14 +16,8 @@
              alt="Logo"/>
         <h2>中国菜宣传</h2>
     </div>
-
-    <div class="search">
-        <input type="text" placeholder="搜索"/>
-        <button class="weibo-btn">
-            <i class="fab fa-weibo"></i>
-        </button>
-    </div>
 </div>
+
 
 <div class="menu">
     <ul>
@@ -55,42 +49,18 @@
                 <a href="h5">#H5鉴赏</a>
             </div>
         </li>
-        <li class="menu-item"><a href="#">图书</a></li>       <!--还未加-->
+        <li class="menu-item"><a href="#">图书</a></li>           <!--还未加-->
         <li class="menu-item"><a href="zhishichuang">知识窗</a></li>
     </ul>
     <div class="slider" id="slider"></div>
 </div>
 
 
+
 <!--    这上面是导航栏-->
 
-<div id="myModel" class="model">
-    <span class="close">&times;</span>
-    <img class="model-content" id="img01">
-</div>
 
 
-<!--<table class="tablecss">
-    <thead>
-    <tr>
-        <th>影像编号</th>
-        <th>影像名称(题目)</th>
-        <th>影像展示(链接调用)</th>
-        <th>影像的来源</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="yingxiang,yingxiangStat:${yingxianglist}">
-        <td th:text="${yingxiangStat.count}"></td>
-        <td th:text="${yingxiang.timu}"></td>
-        <td>
-            <video class="small-img" th:src="${yingxiang.yingxiang}" alt="影像无法显示" />
-        </td>
-        <td th:text="${yingxiang.shipinlaiyuan}"></td>
-    </tr>
-    </tbody>
-</table>
-<script th:src="@{/js/yingxiang_ziyuan.js}"></script>-->
 <div id="info" class="info-container">
     <div class="mianbao-mod" style="z-index:1;"><!--面包屑导航-->
         <div class="kong-wrap">
@@ -104,13 +74,13 @@
             <div class="box-s">
                 <div class="title1">资源</div>
                 <div class="title2">
-                    <a href="http://localhost:8888/zhongguocai/yingxiang" class="title22 title23">
+                    <a href="yingxiang" class="title22 title23">
                         <div class="title231">影像</div>
                     </a>
-                    <a href="http://localhost:8888/zhongguocai/tupian" class="title22 title23">
+                    <a href="tupian" class="title22 title23">
                         <div class="title231">美食图集</div>
                     </a>
-                    <a href="http://localhost:8888/zhongguocai/h5" class="title22 title23">
+                    <a href="h5" class="title22 title23">
                         <div class="title231">H5赏析</div>
                     </a>
                 </div>
