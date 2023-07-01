@@ -312,5 +312,41 @@ public class WebController {
     public String info_reports(){
         return "web/zixun/info_reports";
     }
+    @RequestMapping("/canting")
+    public String cantingtuijian(){
+        return "web/canting/餐厅推荐";
+    }
+    //以下是餐厅的老字号
+    @RequestMapping("/lanxiangzi")
+    public String lanxiangzi_cantingtuijian(){
+        return "web/canting/传统_兰湘子湘菜小炒_餐厅样式";
+    }
+    @RequestMapping("/shiji")
+    public String shiji_cantingtuijian(){
+        return "web/canting/传统_石记港式茶餐厅_餐厅样式";
+    }
+    @RequestMapping("/zuigujin")
+    public String zuigujin_cantingtuijian(){
+        return "web/canting/传统_醉古今_餐厅样式";
+    }
+    @RequestMapping("/fulinmen")
+    public String fulinmen_cantingtuijian(){
+        return "web/canting/国外_新加坡 福临门正宗粤菜风味_餐厅样式";
+    }
+    @RequestMapping("/wuzhaopai")
+    public String wuzhaopai_cantingtuijian(){
+        return "web/canting/国外_无招牌海鲜餐厅(芽笼店) No Signboard Seafood(Geylang)_餐厅样式";
+    }
+    @RequestMapping("/luoshanji")
+    public String luoshanji_cantingtuijian(){
+        return "web/canting/国外_洛杉矶 _ 最能满足中国胃的城市_餐厅样式";
+    }
+
+    //以下是知识窗的后端调用
+    @RequestMapping("/zhishichuang")
+    public String zhishichuang(){
+        return "web/zhishichuang/知识窗";
+    }
+
 
 }
