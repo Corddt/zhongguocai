@@ -17,6 +17,7 @@
         <th>出版社</th>
         <th>出版日期</th>
         <th>价格</th>
+        <th>操作</th>
     </tr>
     </thead>
     <tbody>
@@ -26,8 +27,12 @@
         <td th:text="${book.ISBN}"></td>
         <td th:text="${book.author}"></td>
         <td th:text="${book.company}"></td>
-        <td th:text="${book.time}"></td>
+        <td th:text="${#dates.format(book.time,'YYYY-MM-dd')}"></td>
         <td th:text="${book.price}"></td>
+        <td>
+            <a th:href="@{'/zhongguocai/toupdate/'+${book.id}}">编辑</a>
+            <a th:href="@{'/zhongguocai/deletebyid/'+${book.id}}">删除</a>
+        </td>
     </tr>
     </tbody>
 </table>
