@@ -5,24 +5,25 @@
 }
 
 .tablecss {
+    border: 3px solid grey;
     text-align: center;
-    border: 1px solid black;
     width: 100%;
 }
 
 .tablecss th {
-    border: 1px solid black;
+    border: 3px solid grey;
     color: darkred;
     line-height: 30px;
 }
 
 .tablecss td {
-    border: 2px solid red;
+    border:3px solid grey;
     font-size: 14px;
     line-height: 30px;
 }
 
 .tablecss img .small-img {
+    border:2px solid red;
     max-height: 30px;
     max-width: 100%;
     cursor: pointer;
@@ -399,14 +400,6 @@ a.title23:hover .title231 {
 
 /*图片大小调整*/
 .small-img {
-  /*  display:flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;*/
-    width:500px;
-    height:500px;
+    width: 500px;
+    height: 500px;
 }
-/*.small-img{*/
-/*    max-height:100%;*/
-/*    max-width:100%;*/
-/*}*/

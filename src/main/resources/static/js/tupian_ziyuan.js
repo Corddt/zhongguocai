@@ -4,7 +4,7 @@ var modalImg = document.getElementById('img01');
 var span = document.getElementsByClassName('close')[0];
 
 // 为所有的小图添加点击事件
-var images = document.getElementsByClassName('tupian');
+var images = document.getElementsByClassName('small-img');
 for (var i = 0; i < images.length; i++) {
     images[i].onclick = function(){
         modal.style.display = "block";

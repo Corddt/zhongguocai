@@ -8,6 +8,7 @@
     <!-- 引入 Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- 引入自定义 CSS -->
+    <link rel="stylesheet" th:href="@{/css/tupian_ziyuan.css}">
     <style>
         table {
             width: 100%;
@@ -25,9 +26,13 @@
     </style>
 </head>
 <body>
+<div id="myModel" class="model">
+    <span class="close">&times;</span>
+    <img class="model-content" id="img01">
+</div>
 <div class="container mt-3">
     <!-- 菜谱表格 -->
-    <table class="table table-bordered">
+    <table class="table table-bordered tablecss">
         <thead>
         <tr>
             <th>编号</th>
@@ -45,7 +50,7 @@
             <td th:text="${shicai.mingcheng}"></td>
             <td th:text="${shicai.jieshao}"></td>
             <td>
-                <img th:src="${shicai.tupian}" alt="图片无法显示" class="myImage"/>
+                <img th:src="${shicai.tupian}" alt="图片无法显示" class="myImage small-img"/>
             </td>
             <td th:text="${shicai.jiage}"></td>
             <td th:text="${shicai.tidai}"></td>
@@ -89,7 +94,7 @@
 <!-- 引入 jQuery 和 Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
+<script th:src="@{/js/tupian_ziyuan.js}"></script>
 <!-- 自定义 JS -->
 <script>
     function goToPage() {
