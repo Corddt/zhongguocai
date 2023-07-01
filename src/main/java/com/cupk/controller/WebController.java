@@ -240,7 +240,7 @@ public class WebController {
     public String toUpdate(@PathVariable("id") Integer id, Model model){
         Book book = bookService.findBookByID(id);
         model.addAttribute("book",book);
-        return "zhongguocai/updatebook";
+        return "web/tushu/updatebook";
     }
 
     @RequestMapping("/update")
@@ -256,6 +256,30 @@ public class WebController {
         }
     }
 
+    @RequestMapping("/findbystr")
+    public String findBookByStr(@RequestParam(value = "searchStr") String searchStr,Model model){
+        List<Book> bookList=bookService.findBookByStr(searchStr);
+        model.addAttribute("blist",bookList);
+        return "web/tushu/booklist";
+    }
+
+    @RequestMapping("/delete")
+    public String deleteBooks(Integer[] bookids,Model model){
+        if(bookids != null){
+            int i = bookService.deleteBooks(bookids);
+            if(i > 0){
+                List<Book> bookList=bookService.findAllBooks();
+                model.addAttribute("blist",bookList);
+                model.addAttribute("msg","批量删除图书信息成功");
+                return "web/tushu/booklist";
+            }else{
+                return "public/false";
+            }
+        }else{
+            model.addAttribute("msg","未选择任何图书，无法删除");
+            return "public/false";
+        }
+    }
 
     //这是资源里面的H5赏析子页面
     @RequestMapping("/h5")
