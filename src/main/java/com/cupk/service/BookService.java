@@ -10,4 +10,6 @@ public interface BookService {
     int insertBook(Book book);//添加图书
     int deleteBookByID(Integer id);//根据图书编号删除图书
     int updateBook(Book book);//修改图书信息
+    List<Book> findBookByStr(String searchStr);//模糊查询
+    int deleteBooks(Integer[] ids);//批量删除图书
 }

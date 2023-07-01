@@ -46,4 +46,18 @@ public class BookServiceImpl implements BookService {
     public int updateBook(Book book) {
         return bookMapper.updateBook(book);
     }
+
+    @Override
+    public List<Book> findBookByStr(String searchStr) {
+        return bookMapper.findBookByStr(searchStr);
+    }
+
+    @Override
+    public int deleteBooks(Integer[] ids) {
+        int count = 0;
+        for(Integer id : ids){
+            count += bookMapper.deleteBookByID(id);//逐一删除
+        }
+        return count;//返回删除的总数
+    }
 }

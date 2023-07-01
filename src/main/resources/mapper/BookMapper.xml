@@ -26,5 +26,17 @@
         set name=#{name},ISBN=#{ISBN},author=#{author},price=#{price},company=#{company},time=#{time}
         where id=#{id}
     </update>
+    <select id="findBookByStr" parameterType="java.lang.String" resultType="com.cupk.pojo.Book">
+        select * from food_book
+        where 1=1
+        <if test="searchStr!=null and searchStr!=''">
+            and name like CONCAT('%',#{searchParam},'%')
+            or ISBN like CONCAT('%',#{searchParam},'%')
+            or price like CONCAT('%',#{searchParam},'%')
+            or author like CONCAT('%',#{searchParam},'%')
+            or company like CONCAT('%',#{searchParam},'%')
+            or time like CONCAT('%',#{searchParam},'%')
+        </if>
+    </select>
 
 </mapper>
