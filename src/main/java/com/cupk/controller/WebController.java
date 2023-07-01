@@ -95,6 +95,26 @@ public class WebController {
         model.addAttribute("totalPages", totalPages);
         return "web/qingdan/chuanchengren";
     }
+    //这是清单里面的食品图书子页面
+    @Autowired(required = false)
+    private FoodBookService foodBookService;
+
+    @RequestMapping("/foodbook")
+    public String foodbook(Model model,
+                                @RequestParam(defaultValue = "0") int page,
+                                @RequestParam(defaultValue = "4") int size) {
+
+        page = Math.max(1, page);
+        size = Math.max(1, size);
+        int totalPages = foodBookService.countPages(size);
+        List<FoodBook> foodBookList = foodBookService.findAll(page, size);
+        model.addAttribute("fblist", foodBookList);
+
+        model.addAttribute("page", page);
+        model.addAttribute("size", size);
+        model.addAttribute("totalPages", totalPages);
+        return "web/tushu/foodbook";
+    }
 
 
 

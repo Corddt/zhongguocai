@@ -4,10 +4,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>国内外高分菜谱</title>
+    <title>美食图书文献清单</title>
     <!-- 引入 Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
     <!-- 引入自定义 CSS -->
     <style>
         table {
@@ -26,42 +25,44 @@
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>菜名</th>
-            <th>介绍</th>
-            <th>配料</th>
-            <th>做法</th>
-            <th>成本</th>
-            <th>评分</th>
+            <th>编号</th>
+            <th>名称</th>
+            <th>ISBN</th>
+            <th>作者</th>
+            <th>出版社</th>
+            <th>出版日期</th>
+            <th>价格</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="caipu : ${caiPus}"><!--<tr th:each="tupian,tupianStat:${tupianlist}">-->
-            <td th:text="${caipu.caiming}"></td>
-            <td th:text="${caipu.jieshao}"></td>
-            <td th:text="${caipu.peiliao}"></td>
-            <td th:text="${caipu.zuofa}"></td>
-            <td th:text="${caipu.chengben}"></td>
-            <td th:text="${caipu.pingfen}"></td>
+        <tr th:each="foodbook,foodbookStat:${fblist}">
+            <td th:text="${foodbook.id}"></td>
+            <td th:text="${foodbook.name}"></td>
+            <td th:text="${foodbook.ISBN}"></td>
+            <td th:text="${foodbook.author}"></td>
+            <td th:text="${foodbook.company}"></td>
+            <td th:text="${#dates.format(foodbook.time,'YYYY-MM-dd')}"></td>
+            <td th:text="${foodbook.price}"></td>
         </tr>
         </tbody>
         <button name="button" onclick="history.back()">返回上一页</button>
         <button name="button" onclick="window.location.href = '/zhongguocai/index'">返回主页</button>
+        <button name="button" onclick="window.location.href = '/zhongguocai/login'">管理员登陆</button>
     </table>
-
 
     <!-- 分页组件 -->
     <nav aria-label="Page navigation">
         <ul class="pagination">
             <li class="page-item" th:class="${page != null and page == 1} ? 'disabled' : null">
-                <a class="page-link" th:href="${page != null and page > 1} ? '/zhongguocai/caipu' + '?page=' + ${page - 1} + '&size=' + ${size} : '#'" aria-label="Previous">
+                <a class="page-link" th:href="${page != null and page > 1} ? '/zhongguocai/foodbook' + '?page=' + ${page - 1} + '&size=' + ${size} : '#'" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             <li class="page-item" th:each="i : ${#numbers.sequence(1, totalPages)}" th:class="${page != null and page == i} ? 'active' : null">
-                <a class="page-link" th:href="@{/zhongguocai/caipu(page=${i}, size=${size})}"><span th:text="${i}"></span></a>
+                <a class="page-link" th:href="@{/zhongguocai/foodbook(page=${i}, size=${size})}"><span th:text="${i}"></span></a>
             </li>
             <li class="page-item" th:class="${page != null and page == totalPages} ? 'disabled' : null">
-                <a class="page-link" th:href="${page != null and page < totalPages} ? '/zhongguocai/caipu' + '?page=' + ${page + 1} + '&size=' + ${size} : '#'" aria-label="Next">
+                <a class="page-link" th:href="${page != null and page < totalPages} ? '/zhongguocai/foodbook' + '?page=' + ${page + 1} + '&size=' + ${size} : '#'" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>
@@ -91,7 +92,7 @@
         var pageInput = document.getElementById('pageInput').value;
 
         if (pageInput >= 1 && pageInput <= totalPages) {
-            window.location.href = '/zhongguocai/caipu?page=' + (pageInput) + '&size=' + size;
+            window.location.href = '/zhongguocai/foodbook?page=' + (pageInput) + '&size=' + size;
         }
     }
 </script>
