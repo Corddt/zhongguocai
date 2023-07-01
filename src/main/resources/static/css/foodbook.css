@@ -1,0 +1,11 @@
+.tablecss{
+    text-align: center;
+}
+.tablecss th{
+    color: aquamarine;
+    line-height: 30px;
+}
+.tablecss td{
+    font-size: 14px;
+    line-height: 30px;
+}

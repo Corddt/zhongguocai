@@ -10,14 +10,12 @@
         SELECT * FROM mingdan
         WHERE 1=1
         <if test="searchStr!=null and searchStr!=''">
-            and id like CONCAT('%',#{searchParam},'%')
-            and mingcheng like CONCAT('%',#{searchParam},'%')
-            and caixi like CONCAT('%',#{searchParam},'%')
-            and diqu like CONCAT('%',#{searchParam},'%')
-            and jiage like CONCAT('%',#{searchParam},'%')
-            and zhuyaopeiliao like CONCAT('%',#{searchParam},'%')
+            and mingcheng like CONCAT('%',#{searchStr},'%')
+            and caixi like CONCAT('%',#{searchStr},'%')
+            and diqu like CONCAT('%',#{searchStr},'%')
+            and zhuyaopeiliao like CONCAT('%',#{searchStr},'%')
         </if>
-
     </select>
+
 
 </mapper>
