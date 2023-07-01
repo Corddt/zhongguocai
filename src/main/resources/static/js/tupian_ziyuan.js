@@ -46,4 +46,3 @@ window.onload = function () {
         slider.style.width = rect.width + 'px';
     }
 }
-

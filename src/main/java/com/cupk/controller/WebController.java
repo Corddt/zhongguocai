@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -189,6 +190,21 @@ public class WebController {
         return "web/tushu/insertbook";//访问bookindex.html
     }
 
+    //添加图书信息
+    @RequestMapping("/insert")
+    public String insertBook(Book book,Model model){
+        System.out.println("新增图书信息: "+book);
+        int i = bookService.insertBook(book);
+        if(i > 0){
+            List<Book> bookList=bookService.findAllBooks();
+            model.addAttribute("blist",bookList);
+            model.addAttribute("msg","添加图书信息成功");
+            return "web/tushu/booklist";
+        }else{
+            return "public/false";
+        }
+    }
+
     //查询全部图书
     @RequestMapping("/findall")
     public String findAllBooks(Model model){
@@ -204,6 +220,40 @@ public class WebController {
         Book book = bookService.findBookByID(id);
         System.out.println(book);
         return book;
+    }
+
+    @RequestMapping("/deletebyid/{id}")
+    public String deleteBookByID(@PathVariable("id") Integer id, Model model){
+        int i = bookService.deleteBookByID(id);
+        if(i > 0){
+            List<Book> bookList=bookService.findAllBooks();
+            model.addAttribute("blist",bookList);
+            model.addAttribute("msg","删除图书信息成功");
+            return "web/tushu/booklist";
+        }else{
+            return "public/false";
+        }
+    }
+
+    //跳转到图书修改页面
+    @RequestMapping("/toupdate/{id}")
+    public String toUpdate(@PathVariable("id") Integer id, Model model){
+        Book book = bookService.findBookByID(id);
+        model.addAttribute("book",book);
+        return "zhongguocai/updatebook";
+    }
+
+    @RequestMapping("/update")
+    public String updateBook(Book book,Model model){
+        int i = bookService.updateBook(book);
+        if(i > 0){
+            List<Book> bookList=bookService.findAllBooks();
+            model.addAttribute("blist",bookList);
+            model.addAttribute("msg","修改图书信息成功");
+            return "web/tushu/booklist";
+        }else{
+            return "public/false";
+        }
     }
 
 

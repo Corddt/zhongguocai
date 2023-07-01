@@ -1,22 +1,23 @@
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    color: inherit;
+    box-sizing: border-box;
 }
 
 .tablecss {
     text-align: center;
-    border: 1px solid;
+    border: 1px solid black;
     width: 100%;
 }
 
 .tablecss th {
+    border: 1px solid black;
     color: darkred;
     line-height: 30px;
 }
 
 .tablecss td {
+    border: 2px solid red;
     font-size: 14px;
     line-height: 30px;
 }
@@ -84,11 +85,6 @@
 
 /*这是导航栏的css样式*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .navbar, .menu {
     position: relative;
@@ -401,4 +397,16 @@ a.title23:hover .title231 {
 }
 
 
-
+/*图片大小调整*/
+.small-img {
+  /*  display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;*/
+    width:500px;
+    height:500px;
+}
+/*.small-img{*/
+/*    max-height:100%;*/
+/*    max-width:100%;*/
+/*}*/

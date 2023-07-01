@@ -1,6 +1,7 @@
 package com.cupk.pojo;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -20,5 +21,6 @@ public class Book {
     private Double price;
     private String author;
     private String company;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date time;
 }
