@@ -5,192 +5,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
-    <script type="text/javascript" src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_js/vue.min.js"></script>
-    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_js/jquery-3.7.0.min.js"></script>
-    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_js/slick.js"></script>
-    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_js/info.js"></script>
+    <script type="text/javascript" src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/js/vue.min.js
+"></script>
+    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/js/jquery-3.7.0.min.js
+"></script>
+    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/js/slick.js
+"></script>
+    <script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/js/info.js
+"></script>
 
-    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_css/%E9%A6%96%E9%A1%B5.css">
-    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_css/info.css">
+    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/css/%E9%A6%96%E9%A1%B5.css">
+    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/css/info.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_css/%E9%A1%B5%E9%9D%A28.css">
-
+    <link rel="stylesheet" href="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/css/%E9%A1%B5%E9%9D%A28.css">
 
 
 </head>
 
 <body>
-    <!-- 导航栏 -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5%E7%B4%A0%E6%9D%90_final_pictures/%E5%9B%BE%E6%A0%87.png
-" alt="Logo" />
-            <h2>中国菜宣传</h2>
-        </div>
-
-        <div class="search">
-            <input type="text" placeholder="搜索" />
-            <button class="weibo-btn">
-                <i class="fab fa-weibo"></i>
-            </button>
-        </div>
+<!-- 导航栏 -->
+<div class="navbar">
+    <div class="logo">
+        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5%E7%B4%A0%E6%9D%90_final_pictures/%E5%9B%BE%E6%A0%87.png
+" alt="Logo"/>
+        <h2>中国菜宣传</h2>
     </div>
 
-    <div class="menu">
-        <ul>
-            <li id="home" class="menu-item"><a href="index">首页</a></li>
-            <li class="menu-item"><a href="#">机构</a></li>
-            <li class="menu-item"><a href="#">政策</a></li>
-            <li class="dropdown menu-item">
-                <a href="info">资讯</a>
-                <div class="dropdown-menu">
-                    <a href="info_news">新闻动态</a>
-                    <a href="info_reports">专题报道</a>
-                    <a href="info_notification">通知公告</a>
-                </div>
-            </li>
-            <li class="dropdown menu-item">
-                <a href="#">清单</a>
-                <div class="dropdown-menu">
-                    <a href="caipu">国内外高分菜谱</a>
-                    <a href="chuanchengren">中国菜传承人名单</a>
-                    <a href="chengshi">中国美食之都(包括5座联合国官方承认)</a>
-                    <a href="shicai">中国菜典型食材特点及可替代品名单</a>
-                    <a href="mingdan">中国菜首次公开名单</a>
-                </div>
-            </li>
-            <li class="dropdown menu-item">
-                <a href="#">资源</a>
-                <div class="dropdown-menu">
-                    <a href="yingxiang">影像</a>
-                    <a href="tupian">美食图集</a>
-                    <a href="#">#H5鉴赏</a>
-                </div>
-            </li>
-            <li class="menu-item"><a href="#">论坛</a></li>
-            <li class="menu-item"><a href="#">知识窗</a></li>
-        </ul>
-        <div class="slider" id="slider"></div>
-    </div>
-    <!-- 第三个页面 -->
+    <!--<div class="search">
+        <input type="text" placeholder="搜索"/>
+        <button class="weibo-btn">
+            <i class="fab fa-weibo"></i>
+        </button>
+    </div>-->
+</div>
 
-
-    <div id="info" class="info-container">
-        <div class="mianbao-mod" style="z-index:1;"><!--面包屑导航-->
-            <div class="kong-wrap">
-                <div class="mianbao-item"><a class="mianbao-a" href="./首页.html">首页</a></div>
-                <div class="mianbao-item"><a class="mianbao-a" href="./info.html">资讯</a> </div>
-                <div class="mianbao-item"><a class="mianbao-a" href="./info_reports.html">专题报告</a> </div>
+<div class="menu">
+    <ul>
+        <li id="home" class="menu-item"><a href="首页.html">首页</a></li>
+        <li class="menu-item"><a href="../餐厅/餐厅推荐.html">餐厅</a></li>
+        <li class="dropdown menu-item">
+            <a href="info.html">资讯</a>
+            <div class="dropdown-menu">
+                <a href="info_reports.html">#专题报道</a>
+                <a href="info_news.html">#新闻动态</a>
+                <a href="info_notification.html">#通知公告</a>
             </div>
+        </li>
+        <li class="dropdown menu-item">
+            <a href="#">清单</a>
+            <div class="dropdown-menu">
+                <a href="#">#国内外高分菜谱</a>
+                <a href="#">#中国菜传承人名单</a>
+                <a href="#">#中国美食之都(包括5座联合国官方承认)</a>
+                <a href="#">#中国菜典型食材特点及可替代品名单</a>
+                <a href="#">#中国菜首次公开名单</a>
+            </div>
+        </li>
+        <li class="dropdown menu-item">
+            <a href="#">资源</a>
+            <div class="dropdown-menu">
+                <a href="#">#影像</a>
+                <a href="#">#美食图集</a>
+                <a href="#">#H5鉴赏</a>
+            </div>
+        </li>
+        <li class="menu-item"><a href="#">论坛</a></li>
+        <li class="menu-item"><a href="../知识窗/知识窗.html">知识窗</a></li>
+    </ul>
+    <div class="slider" id="slider"></div>
+</div>
+<!-- 第三个页面 -->
+
+
+<div id="info" class="info-container">
+    <div class="mianbao-mod" style="z-index:1;"><!--面包屑导航-->
+        <div class="kong-wrap">
+            <div class="mianbao-item"><a class="mianbao-a" href="./首页.html">首页</a></div>
+            <div class="mianbao-item"><a class="mianbao-a" href="./info.html">资讯</a></div>
+            <div class="mianbao-item"><a class="mianbao-a" href="./info_reports.html">专题报告</a></div>
         </div>
+    </div>
 
-        <div class="box111" id="ding" v-cloak>
-            <div class="kong-wrap">
-                <div class="box-s">
-                    <div class="title1">专题报道</div>
-                </div>
-                <div class="content1">
-                    <div class="content11" v-for="(item,index) in reportsList" :key="index">
-                        <div class="imgformat imgsuofang"><a target="_blank" :href="item.url"><img :src="item.image" alt=""
-                                    title=""></a></div>
-                        <div class="txtformat">
+    <div class="box111" id="ding" v-cloak>
+        <div class="kong-wrap">
+            <div class="box-s">
+                <div class="title1">专题报道</div>
+            </div>
+            <div class="content1">
+                <div class="content11" v-for="(item,index) in reportsList" :key="index">
+                    <div class="imgformat imgsuofang"><a target="_blank" :href="item.url"><img :src="item.image" alt=""
+                                                                                               title=""></a></div>
+                    <div class="txtformat">
 
-                            <div class="txttitle"><a :href="item.url" target="_blank" :title="item.title"
-                                style="font-size: 18px;">{{item.title}}</a>
-                            </div>
-
-
-                            <div class="date">
-                                {{item.data}}
-                            </div>
-                            <div class="txttitle">
-                                {{item.txt}}</div>
-                            <a :href="item.url" target="_blank" class="chakan">查看更多</a>
+                        <div class="txttitle"><a :href="item.url" target="_blank" :title="item.title"
+                                                 style="font-size: 18px;">{{item.title}}</a>
                         </div>
+
+
+                        <div class="date">
+                            {{item.data}}
+                        </div>
+                        <div class="txttitle">
+                            {{item.txt}}
+                        </div>
+                        <a :href="item.url" target="_blank" class="chakan">查看更多</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-
-    <div class="section">
-        <div class="laoba">
-            <div class="zuohe"style="margin-top: 100px">
-                <div class="youqing" >友情链接</div><br><br>
-                <a href="http://www.ccas.com.cn/">中国烹饪协会</a><br><br>
-                <a href="https://tv.cctv.com/">央视网:美食中国</a><br><br>
-                <a href="https://www.meishichina.com/">美食天下</a><br><br>
-                <a href="https://tv.cctv.com/2017/01/19/VIDAtIyRXSWBaJGZ1itGdZFE170119.shtml">舌尖上的中国</a><br><br>
-                <a href="https://www.cupk.edu.cn/">中国石油大学（北京）克拉玛依校区</a>
-            </div>
-            <div class="youhe" style="margin-top: 100px">
-                地方美食网<br><br><br>
-                <a
+<div class="section">
+    <div class="laoba">
+        <div class="zuohe" style="margin-top: 100px">
+            <div class="youqing">友情链接</div>
+            <br><br>
+            <a href="http://www.ccas.com.cn/">中国烹饪协会</a><br><br>
+            <a href="https://tv.cctv.com/">央视网:美食中国</a><br><br>
+            <a href="https://www.meishichina.com/">美食天下</a><br><br>
+            <a href="https://tv.cctv.com/2017/01/19/VIDAtIyRXSWBaJGZ1itGdZFE170119.shtml">舌尖上的中国</a><br><br>
+            <a href="https://www.cupk.edu.cn/">中国石油大学（北京）克拉玛依校区</a>
+        </div>
+        <div class="youhe" style="margin-top: 100px">
+            地方美食网<br><br><br>
+            <a
                     href="https://topic.visitbeijing.com.cn/site/2018/S/foods/index.html">北京</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://travel.qunar.com/p-cs299957-tianjin-meishi">天津</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://baijiahao.baidu.com/s?id=1629084869466551788">河北</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.sohu.com/a/202603587_100014697">山西</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.163.com/dy/article/H7SR8TPI0552IASZ.html">内蒙古</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://zhuanlan.zhihu.com/p/441510651">辽宁</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://baijiahao.baidu.com/s?id=1715085040749619934">吉林</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.sohu.com/a/203276734_100040190">黑龙江</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://zhuanlan.zhihu.com/p/269648160">上海</a><br><br>
-                <a href="http://www.jsmsw.cc/">江苏</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.sohu.com/a/208793760_573793">浙江</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://zhuanlan.zhihu.com/p/428072292">安徽</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.xiangha.com/xiaochi/fujiansheng/">福建</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a
+            <a href="https://travel.qunar.com/p-cs299957-tianjin-meishi">天津</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://baijiahao.baidu.com/s?id=1629084869466551788">河北</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/202603587_100014697">山西</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.163.com/dy/article/H7SR8TPI0552IASZ.html">内蒙古</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://zhuanlan.zhihu.com/p/441510651">辽宁</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://baijiahao.baidu.com/s?id=1715085040749619934">吉林</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/203276734_100040190">黑龙江</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://zhuanlan.zhihu.com/p/269648160">上海</a><br><br>
+            <a href="http://www.jsmsw.cc/">江苏</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/208793760_573793">浙江</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://zhuanlan.zhihu.com/p/428072292">安徽</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.xiangha.com/xiaochi/fujiansheng/">福建</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
                     href="https://www.sohu.com/a/204651250_100040190">江西</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://baijiahao.baidu.com/s?id=1717857331230543492">山东</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://uhenan.com/Delicious/Index">河南</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://www.1797.com.cn/">湖北</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://www.hunmsw.cn/">湖南</a><br><br>
-                <a href="http://yjmeishi.net/pc/home/">广东</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://tv.cctv.com/yskd/wdzg/gxwd/index.shtml">广西</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.sohu.com/a/355886380_120146412">海南</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://www.sjsdcq.com/">重庆</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://www.cwroom.com/wenhua/">四川</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://travel.qunar.com/p-sf297315-guizhou-meishi">贵州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://culture.yunnan.cn/food/">云南</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a
+            <a href="https://baijiahao.baidu.com/s?id=1717857331230543492">山东</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://uhenan.com/Delicious/Index">河南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.1797.com.cn/">湖北</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.hunmsw.cn/">湖南</a><br><br>
+            <a href="http://yjmeishi.net/pc/home/">广东</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://tv.cctv.com/yskd/wdzg/gxwd/index.shtml">广西</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/355886380_120146412">海南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.sjsdcq.com/">重庆</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.cwroom.com/wenhua/">四川</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://travel.qunar.com/p-sf297315-guizhou-meishi">贵州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://culture.yunnan.cn/food/">云南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
                     href="https://www.tibet3.com/lvyou/wcfq/ysh/2018-05-09/76473.html">西藏</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://dfz.shaanxi.gov.cn/sxts/mytc/">陕西</a><br><br>
-                <a href="https://zhuanlan.zhihu.com/p/432028350">甘肃</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.xiangha.com/xiaochi/qinghaisheng/">青海</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.sohu.com/a/198855996_100040190">宁夏</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://www.xinjiangnet.com.cn/mspd/">新疆</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
-            <div class="dilan">
-                <a href="">网站地图</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="">版权与免责声明</a>
-                <br><br>
-                <span>建议使用360极速、Chrome、Firefox浏览器，最佳分辨率1920×1080</span>
-            </div>
+            <a href="http://dfz.shaanxi.gov.cn/sxts/mytc/">陕西</a><br><br>
+            <a href="https://zhuanlan.zhihu.com/p/432028350">甘肃</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.xiangha.com/xiaochi/qinghaisheng/">青海</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.sohu.com/a/198855996_100040190">宁夏</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.xinjiangnet.com.cn/mspd/">新疆</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="dilan">
+            <a href="">网站地图</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">版权与免责声明</a>
+            <br><br>
+            <span>建议使用360极速、Chrome、Firefox浏览器，最佳分辨率1920×1080</span>
         </div>
     </div>
+</div>
 
 
-
-
-
-    <script>
-        var vm = new Vue({
-            el: "#ding",
-            data: {
-                reportsList: [],
-            }
-        });
-        $(document).ready(function(){
-            $.get("https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5xuanran/%E5%92%A8%E8%AF%A2%E7%BD%91%E9%A1%B5_data/reports.json",function(data) {
-                vm.reportsList=data;
-            })
-        })
-    </script>
-
+<script>
+    var vm = new Vue({
+        el: "#ding",
+        data: {
+            reportsList: [
+                {
+                    "title": "运河美食·江苏丨江湖河鲜丰饶，运河送来淮扬菜与大闸蟹",
+                    "url": "https://www.toutiao.com/article/7236958722642215463/?channel=&source=news",
+                    "image": "https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/1.jpg",
+                    "data": "2023-05-25",
+                    "txt": "悠长运河，泽润苏城. 大运河江苏段流淌着的不仅是运河水，更是绵延不绝的南北文化的融合，这种融合在饮食上体现得尤为明显。因漕运繁荣，苏州地区的人们自古就吸收了南北方不同的烹饪方式，形成独具一格的淮扬菜。此外，鲜美的大闸蟹也通过运河送往北方。"
+                },
+                {
+                    "title": "运河美食·天津丨狗不理、嘎巴菜，津菜津宴唤醒一天精气神",
+                    "url": "https://www.toutiao.com/article/7236957149123838522/?channel=&source=news",
+                    "image": "https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/2.jpg",
+                    "data": "2023-05-25",
+                    "txt": "九河下梢天津卫，三道浮桥两道关”，天津被称为“大运河载来的城市”，因河而生，因河而盛。商贾云集、船工往来如织也孕育出狗不理、煎饼果子、耳朵眼炸糕、嘎巴菜等闻名全国的小吃。靠海吃海，天津人对海鲜的热爱，也成就了罾（zēng）蹦鲤鱼、七里海河蟹面等名菜名吃。"
+                },
+                {
+                    "title": "南宁：非遗美食飘香 食客大快朵颐",
+                    "url": "https://www.toutiao.com/article/7222944242883265081/?channel=&source=news",
+                    "image": "https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/3.png",
+                    "data": "2023-04-17",
+                    "txt": "央广网南宁4月17日消息（记者黄月芬）4月16日，由南宁市良庆区主办的“良城非遗 壮味赏庆”——首届良庆区”趣玩三月三”特色民俗文化宴活动举办。活动现场，非遗美食技艺传承人大展身手，脆皮扣肉、焖公鸡蛋、油爆大肠、酸粥鱼生、火龙茶等多道良庆区非遗特色美食纷纷亮相，让食客大快朵颐。"
+                },
+                {
+                    "title": "沉浸式”美食之旅——带你品味舌尖上的喀什",
+                    "url": "https://www.toutiao.com/article/7244711903346409995/?channel=&source=news",
+                    "image": "https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/4.png",
+                    "data": "2023-06-15",
+                    "txt": "民以食为天，饮食蕴藏着深厚的文化基因和民俗传统。美食不仅是舌尖味蕾的诱惑、乡愁记忆的浓缩，更是开启一段美好旅程的方向指引和心灵牵挂。喀什作为古丝绸之路南北两道的交汇点，汇聚了东西方饮食文化特征，不但品种繁多、色香味俱佳，而且绿色健康。走在喀什大街小巷，烤全羊、烤羊肉串、清炖羊肉、馕坑肉、烤包子、抓饭、拉面、油塔子、馕、烤鱼、面肺子、凉粉等美食应有尽有，无一不令人垂涎欲滴。"
+                },
+                {
+                    "title": "肉香飘出海外！他们用美食讲述东坡的惠州故事",
+                    "url": "https://www.toutiao.com/article/7248248434057265719/?channel=&source=news",
+                    "image": "https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/5.jpg",
+                    "data": "2023-06-24",
+                    "txt": "6月24日，“东江美食·惠州味道”中马文化交流活动第五期在惠州市东平窑陶瓷艺术研究院举行，本次活动以瓷肴美馔，东坡故事”为主题，通过线上直播的方式，将文化融入美食进行传授，助力从事餐饮行业的侨胞学以致用，与线下集中收看的马来西亚惠州联合总会成员们交流。"
+                },
+                {
+                    "title": "中国菜登上查尔斯加冕礼，背后的“皇室华裔御厨”什么来头",
+                    "url": "https://www.toutiao.com/article/7230297069628916264/?channel=&source=news",
+                    "image": "https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/6.png",
+                    "data": "2023-05-07",
+                    "txt": "5月7日，英国国王查尔斯三世的加冕庆典活动进入第二天，按照惯例，国王和王后会公布“加冕菜谱”，并欢迎英国各地的民众参加“加冕午餐”（The Big Lunch）。值得注意的是，此次加冕大餐官方食谱中出现了一道中餐，而负责制作这道美食的是曾获大英帝国勋章的谭荣辉。"
+                }
+            ],
+        }
+    });
+</script>
+<script src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/finalweb_css_js/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%B5%84%E8%AE%AF/js/%E6%BB%91%E5%9D%97.js
+"></script>
 
 </body>
 
