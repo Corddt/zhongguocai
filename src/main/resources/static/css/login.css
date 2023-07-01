@@ -1,0 +1,185 @@
+*{
+	/* 清除浏览器默认样式 */
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+	background: url('https://cupkcupk.oss-cn-beijing.aliyuncs.com/wyj_%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E4%BA%91%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/images/%E8%83%8C%E6%99%AF.png');
+	background-size: 100% 100% ;
+    background-attachment: fixed;
+}
+
+.top{
+	height: 100px;
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 15vh;
+	text-align: center;
+	position: relative;
+}
+
+.logo{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 100px;
+}
+.titlePicture{
+	width: 400px;
+	height: 120px;
+	position: absolute;
+	top: 0;
+}
+.titlezi{
+	width: 50rem;
+	font-size:57px; 
+	color:#311E1F;
+	font-family:'alfa-slab-one';
+	position: absolute;
+	left: 90px;
+}
+.bottom{
+	width: 800px;
+    text-align:center;
+    margin:0 auto;
+	margin-top: 100px;
+    font-size: 15px;
+    color:#123EB5;
+}
+
+
+#change_login,#change_sign{
+	/* 高120px、宽35px */
+	width: 120px;
+	height: 35px;
+	/* 背景颜色 */
+	background-color: #3e8e41;
+	/* 边框圆角 */
+	border-radius: 10px;
+	/* 文字居中，白色加粗 */
+	text-align: center;
+	line-height: 35px;
+	font-weight: bolder;
+	color:white;
+	/* 水平居中 */
+	left: 35%;
+	margin-top: 124.5px;
+	/*  设置鼠标指针*/
+	cursor: pointer;
+	/*  */
+	position: absolute;
+}
+
+.login_and_sign{
+	/* 整体高300px、宽785px、居中、相对定位 */
+	height: 300px;
+	width: 785px;
+	margin: 0 auto;
+	margin-top: 10px;
+	position: relative;
+}
+
+/* 设置表单整体样式 */
+.login {
+	/* 
+	背景颜色rgba(144, 132, 225, 0.3)、外边框圆角8px、阴影、内边距20px，宽度350px。
+	*/
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	box-shadow: 0 0 10px rgba(142, 132, 208, 0.3);
+    background-color: rgba(144, 132, 225, 0.3);
+	padding: 20px;
+	width: 350px;
+	display: block;
+	/* 左边 */
+	position: absolute;
+	margin-left: 180px;
+}
+.signUp {
+	/* 
+	背景颜色rgba(144, 132, 225, 0.3)、外边框圆角8px、阴影、内边距20px，宽度350px。
+	*/
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 0 0 10px rgba(142, 132, 208, 0.3);
+    background-color: rgba(144, 132, 225, 0.3);
+	padding: 20px;
+	width: 350px;
+	/* 右边 */
+	position: absolute;
+	left: 395px;
+	/* 默认不显示 */
+	display: none;
+}
+h1 {
+	/* 标题
+	字体大小：32px;
+	底部外边距20px;
+	文本内容居中。
+	*/
+	font-size: 32px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	/* 垂直排列 */
+	flex-direction: column;
+}
+
+label {
+	/* 字号18px、底部外边距10px */
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+	/* 外边框单实线、颜色、宽度1px */
+	border: solid rgb(148, 148, 223) 1px;
+	border-radius: 3px;
+	/* 字号16px、底部外边距20px、内边距10px、宽度280px、居中*/
+	font-size: 16px;
+    width: 280px;
+	padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#sign_idx,#login_idx {
+	/* 背景颜色 不显示边框 边框圆角3px 字体颜色白色 */
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 3px;
+    text-align: center;
+	color: #fff;
+	/* 鼠标指针样式 */
+	cursor: pointer;
+	/* 字号18px、内边距10px、宽度250px、居中、鼠标悬停时背景颜色渐变 */
+	font-size: 18px;
+	padding: 10px;
+	transition: background-color 0.3s ease;
+    width: 250px;
+    margin: 0 auto;
+}
+
+#sign_idx:hover,#login_idx:hover {
+	/* 设置鼠标悬停时背景颜色 */
+	background-color: #3e8e41;
+}
+
+/* 错误提示信息样式 */
+#sp_error_message,#error_message{
+	/* 字体红色，大小10px */
+	font-size: 10px;
+	color: red;
+	/* 外边距设置 */
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.mima{
+	font-size: 18px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <script th:src="@{/js/login.js}"></script>
+    <style>
+    </style>
+</head>
+<body>
+	<!-- <img src="../images/logo.png" class="titlePicture"> -->
+    <div class="top">
+        <!-- <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5%E7%B4%A0%E6%9D%90_final_pictures/%E5%9B%BE%E6%A0%87.png" class="logo"> -->
+        <div class="titlezi">中国美食官网图书管理登录</div>
+    </div>
+	
+    <div class="login_and_sign">
+        <div class="login">
+            <h1>登&nbsp;&nbsp;录</h1>
+            <form action="#">
+                <label for="username">账号：</label>
+                <!-- 账号填写 -->
+                <input type="text" id="username" placeholder="账号">
+                <label for="password">密码:</label>
+                <!-- 密码填写 -->
+                <input type="password" id="password" placeholder="密码">
+                <!-- 错误提示信息 -->
+				<div class="mima">
+                    <input type="checkbox" class="box">
+					<span>记住密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忘记密码?立即找回</span>  
+                </div>
+                <span id="error_message"></span>
+                <!-- 登录按钮，点击进行验证和跳转 -->
+                <div id='login_idx'>登 录</div>
+            </form>
+        </div>
+            </form>
+        </div>
+	 <div class="bottom">
+         	<span>服务热线：123456789</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;Email:zhongguomeishi.com</span>
+        	<span>&nbsp;&nbsp;&nbsp;&nbsp;中国美食云计算中心</span>
+      </div>
+</body> 
+</html>

@@ -281,6 +281,11 @@ public class WebController {
         }
     }
 
+    @RequestMapping("/login")
+    public String login(){
+        return "public/login";
+    }
+
     //这是资源里面的H5赏析子页面
     @RequestMapping("/h5")
     public String h5() {
