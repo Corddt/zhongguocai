@@ -436,19 +436,22 @@ H5欣赏：引用微信上的美食推文
 # 7 完成情况
 
 ## 7.1 系统描述
-
+包括登录系统，餐厅推荐、美食行业资讯、食材、菜品和美食城市清单、影像资源、美食图书杂志、美食养生小知识
 
 
 ### 7.1.1 组织结构图
-
+![输入图片说明](src/main/resources/templates/public/7.1zuzhijiegou.jpg)
 
 
 
 ### 7.1.2 业务流程图
 
+![输入图片说明](src/main/resources/templates/public/7.2liuchengtu.jpg)
 
 
 ### 7.1.3 数据流程图
+
+
 
 
 
