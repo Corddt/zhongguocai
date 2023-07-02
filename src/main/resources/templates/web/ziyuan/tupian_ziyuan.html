@@ -8,25 +8,28 @@
 <head>
     <meta charset="UTF-8">
     <title>美食图集</title>
+    <style>
+        .logo img {
+            width: 200px;
+            height: 200px;
+            background-size: 50%;
+        }
+    </style>
 </head>
 <body>
 <!--    这下面是导航栏-->
 <!-- 导航栏 -->
-<div class="blank"></div>
 <div class="navbar">
     <div class="logo">
-        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5_images/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87.png"
-             alt="Logo"/>
+        <img src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E9%A6%96%E9%A1%B5%E7%B4%A0%E6%9D%90_final_pictures/%E5%9B%BE%E6%A0%87.png" alt="Logo" />
         <h2>中国菜宣传</h2>
     </div>
-
 </div>
-
 <div class="menu">
     <ul>
-        <li id="home" class="menu-item"><a href="index">首页</a></li>
+        <li  class="menu-item"><a href="index">首页</a></li>
         <li class="menu-item"><a href="canting">餐厅</a></li> <!--还没有加-->
-        <li class="dropdown menu-item">
+        <li  class="dropdown menu-item">
             <a href="info">资讯</a>
             <div class="dropdown-menu">
                 <a href="info_reports">#专题报道</a>
@@ -44,7 +47,7 @@
                 <a href="mingdan">#中国菜首次公开名单</a>
             </div>
         </li>
-        <li class="dropdown menu-item">
+        <li id="home" class="dropdown menu-item">
             <a href="tupian">资源</a>
             <div class="dropdown-menu">
                 <a href="yingxiang">#影像</a>
@@ -52,12 +55,11 @@
                 <a href="h5">#H5鉴赏</a>
             </div>
         </li>
-        <li class="menu-item"><a href="foodbook">图书</a></li>           <!--还未加-->
+        <li class="menu-item"><a href="foodbook">图书</a></li>       <!--还未加-->
         <li class="menu-item"><a href="zhishichuang">知识窗</a></li>
     </ul>
     <div class="slider" id="slider"></div>
 </div>
-
 
 
 <!--    这上面是导航栏-->
