@@ -3,19 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <title>添加图书</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        video{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/
+            /*filter:grayscale(100%); //背景灰度设置*/
+            z-index:-11
+        }
+        source{
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+        }
+
+
+        .login {
+            /*
+            背景颜色rgba(144, 132, 225, 0.3)、外边框圆角8px、阴影、内边距20px，宽度350px。
+            */
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            box-shadow: 0 0 10px rgba(142, 132, 208, 0.3);
+            background-color: #00000060;
+            padding: 50px;
+            width: 500px;
+            height: 600px;
+            display: block;
+            margin:170px 600px;
+            /* 左边 */
+            position: absolute;
+
+
+
+        }
+
+
+        .zhengchang {
+            border: 0;
+            width: 50%;
+            font-size: 15px;
+            color: #fff;
+            background: transparent;
+            border-bottom: 2px solid #fff;
+            padding: 5px 10px;
+            outline: none;
+            margin-top: 8px;
+            margin-left: 0px;
+
+        }
+        .fanhui {
+            margin-top: 20px;
+            margin-left: 35px;
+            width: 408px;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #30cfd0, #330867);
+            opacity: 100%;
+        }
+
+
+
+        .suoyou{
+            margin-top: 20px;
+            margin-left: 80px;
+            width: 60%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #FFFF00,#FF8C00);
+            opacity: 60%;
+            display: inline-block;
+        }
+        .tianjia{
+            margin-top: 20px;
+            margin-left: 80px;
+            width: 60%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #00FFFF,#00FF7F);
+            opacity: 60%;
+            display: inline-block;
+        }
+
+
+        #input-box {
+            margin-top: 5%;
+        }
+
+
+        h1 {
+            color: #ffffff90;
+            margin-top: 5%;
+            margin-left: 30%;
+        }
+
+        a{
+            text-decoration: none;
+            color:white;
+        }
+
+        .queren{
+            margin-top: 0px;
+            margin-left: 35px;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #FFFF00,#FF8C00);
+            opacity: 100%;
+            display: inline-block;
+        }
+        .chongzhi{
+            margin-top: 0px;
+            margin-left: 5px;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #00FFFF,#00FF7F);
+            opacity: 100%;
+            display: inline-block;
+        }
+
+
+        form{
+            margin-left: 35px;
+            color: #fff;
+            opacity: 60%;
+            text-align: center;
+        }
+
+
+    </style>
 </head>
 <body>
-<h2>添加图书</h2>
-<form action="/zhongguocai/insert" method="post">
-    请输入图书名称: <input id="name" name="name" type="text"><br><br>
-    请输入图书ISBN: <input id="ISBN" name="ISBN" type="text"><br><br>
-    请输入图书作者: <input id="author" name="author" type="text"><br><br>
-    请输入图书价格: <input id="price" name="price" type="text" placeholder="请输入数字"><br><br>
-    请输入图书出版社: <input id="company" name="company" type="text"><br><br>
-    请输入图书出版时间: <input id="time" name="time" type="date"><br><br>
-    <input type="submit" value="确认">
-    <input type="reset" value="重置">
-</form>
-<button name="button" onclick="history.back()">返回</button>
+<video width="100%" autoplay="autoplay" loop="loop" muted="muted">
+    <source src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E8%A7%86%E9%A2%91/login_background.mp4">
+</video>
+<div class="login">
+    <div>
+        <h1>添加图书</h1>
+    </div>
+    <br>
+    <form action="/zhongguocai/insert" method="post">
+        请输入图书名称: <input id="name" name="name" type="text"><br><br>
+        请输入图书ISBN: <input id="ISBN" name="ISBN" type="text"><br><br>
+        请输入图书作者: <input id="author" name="author" type="text"><br><br>
+        请输入图书价格: <input id="price" name="price" type="text" placeholder="请输入数字"><br><br>
+        请输入图书出版社: <input id="company" name="company" type="text"><br><br>
+        请输入图书出版时间: <input id="time" name="time" type="date"><br><br>
+        <button type="submit" class="queren">确认</button>
+        <button type="reset" class="chongzhi">重置</button>
+        <button name="button" class="fanhui" onclick="history.back()">返回</button>
+    </form>
+
+</div>
 </body>
+<script>
+    var video=document.querySelector('video');
+    video.prototype=5;
+</script>
 </html>

@@ -3,14 +3,162 @@
 <html lang="ch" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>美食图书推荐</title>
+    <title>美食图书推荐管理功能</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        video{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/
+            /*filter:grayscale(100%); //背景灰度设置*/
+            z-index:-11
+        }
+        source{
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+        }
+
+
+        .login {
+            /*
+            背景颜色rgba(144, 132, 225, 0.3)、外边框圆角8px、阴影、内边距20px，宽度350px。
+            */
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            box-shadow: 0 0 10px rgba(142, 132, 208, 0.3);
+            background-color: #00000060;
+            padding: 50px;
+            width: 500px;
+            height: 400px;
+            display: block;
+            margin:220px 600px;
+            /* 左边 */
+            position: absolute;
+
+
+
+        }
+
+
+        button {
+            margin-top: 20px;
+            margin-left: 80px;
+            width: 60%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #30cfd0, #330867);
+            opacity: 60%;
+        }
+
+
+        input {
+            border: 0;
+            width: 60%;
+            font-size: 15px;
+            color: #fff;
+            background: transparent;
+            border-bottom: 2px solid #fff;
+            padding: 5px 10px;
+            outline: none;
+            margin-top: 10px;
+            margin-left: 80px;
+
+        }
+
+        .suoyou{
+            margin-top: 20px;
+            margin-left: 80px;
+            width: 60%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #FFFF00,#FF8C00);
+            opacity: 60%;
+            display: inline-block;
+        }
+        .tianjia{
+            margin-top: 20px;
+            margin-left: 80px;
+            width: 60%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #00FFFF,#00FF7F);
+            opacity: 60%;
+            display: inline-block;
+        }
+        }
+
+        #input-box {
+            margin-top: 5%;
+        }
+
+
+        h1 {
+            color: #ffffff90;
+            margin-top: 5%;
+            margin-left: 28%;
+        }
+
+        a{
+            text-decoration: none;
+            color:white;
+        }
+
+
+
+    </style>
 </head>
 <body>
-<a href="/zhongguocai/findall">查询全部图书</a><br>
-<a href="/zhongguocai/toinsert">添加图书</a>
-<form action="/zhongguocai/findbystr" method="post">
-    <input type="text" id="searchStr" name="searchStr">
-    <input type="submit" value="查询">
-</form>
+<video width="100%" autoplay="autoplay" loop="loop" muted="muted">
+    <source src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E8%A7%86%E9%A2%91/login_background.mp4">
+</video>
+<div class="login">
+    <div>
+        <h1>Administrator</h1>
+    </div>
+    <form action="/zhongguocai/findbystr" method="post">
+        <div id="input_box">
+            <input type="text" id="searchStr" name="searchStr" placeholder="请输入图书名">
+        </div>
+        <button type="submit">查询</button><br>
+    </form>
+<div class="suoyou">
+    <a href="/zhongguocai/findall">查询全部图书</a><br>
+</div>
+<div class="tianjia">
+    <a href="/zhongguocai/toinsert">添加图书</a>
+</div>
+
+</div>
 </body>
+<script>
+    var video=document.querySelector('video');
+    video.prototype=5;
+</script>
 </html>
