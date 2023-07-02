@@ -1,48 +1,146 @@
 <!DOCTYPE html>
 <!--suppress ThymeleafVariablesResolveInspection -->
 <html lang="ch" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" th:href="@{/css/foodbook.css}">
+<!--<link rel="stylesheet" th:href="@{/css/foodbook.css}">-->
 <script th:src="@{/js/foodbook.js}"></script>
 <head>
     <meta charset="UTF-8">
     <title>美食图书推荐</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        video{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/
+            /*filter:grayscale(100%); //背景灰度设置*/
+            z-index:-11
+        }
+        source{
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+        }
+
+        .tablestyle  {
+            margin: 15px 300px;
+            border:0;
+            opacity: 0.7;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            width: 1000px;
+            color:white;
+        }
+        .tablestyle th {
+            opacity: 0.7;
+        }
+        .tablestyle,.tablestyle th,.tablestyle td {
+            font-size:0.95em;
+            text-align:center;
+            padding:2px;
+            border-collapse:collapse;
+        }
+        .tablestyle th,.tablestyle td {
+            opacity: 0.7;
+            border-width:1px 0 1px 0;
+            border:2px inset #ffffff;
+        }
+        .tablestyle tr {
+            border: 0px solid #ffffff;
+        }
+
+
+        a:hover{
+            color:red;
+        }
+
+        .piliang{
+            width: 100px;
+            height: 20px;
+            margin-left:300px;
+            margin-top: 100px;
+
+        }
+
+
+        .xiaoge{
+            background-color: rgb(96, 111, 127);
+            opacity: 0.6;
+        }
+
+
+        button{
+            border:0px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #30cfd0, #330867);
+            opacity: 60%;
+        }
+
+
+
+    </style>
 </head>
 <body>
-<button onclick="deleteBooks()">批量删除</button>
-<form id="booksform" action="/zhongguocai/delete" method="post">
-    <table class="tablecss">
-        <thead>
-        <tr>
-            <th><input type="checkbox"></th>
-            <th>编号</th>
-            <th>名称</th>
-            <th>ISBN</th>
-            <th>作者</th>
-            <th>出版社</th>
-            <th>出版日期</th>
-            <th>价格</th>
-            <th>操作</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="book,bookStat:${blist}">
-            <td>
-                <input type="checkbox" th:id="'ids_'+${book.id}" th:value="${book.id}" name="bookids">
-            </td>
-            <td th:text="${bookStat.count}"></td>
-            <td th:text="${book.name}"></td>
-            <td th:text="${book.ISBN}"></td>
-            <td th:text="${book.author}"></td>
-            <td th:text="${book.company}"></td>
-            <td th:text="${#dates.format(book.time,'YYYY-MM-dd')}"></td>
-            <td th:text="${book.price}"></td>
-            <td>
-                <a th:href="@{'/zhongguocai/toupdate/'+${book.id}}">编辑</a>
-                <a th:href="@{'/zhongguocai/deletebyid/'+${book.id}}">删除</a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</form>
+<video width="100%" autoplay="autoplay" loop="loop" muted="muted">
+    <source src="https://cupkcupk.oss-cn-beijing.aliyuncs.com/%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2%E8%A7%86%E9%A2%91/login_background.mp4">
+</video>
+<div class="piliang">
+    <input type="checkbox" class="xiaoge">
+    <button onclick="deleteBooks()">批量删除</button>
+</div>
+    <form id="booksform" action="/zhongguocai/delete" method="post">
+        <table class="tablestyle">
+            <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>编号</th>
+                <th>名称</th>
+                <th>ISBN</th>
+                <th>作者</th>
+                <th>出版社</th>
+                <th>出版日期</th>
+                <th>价格</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="book,bookStat:${blist}">
+                <td>
+                    <input type="checkbox" th:id="'ids_'+${book.id}" th:value="${book.id}" name="bookids">
+                </td>
+                <td th:text="${bookStat.count}"></td>
+                <td th:text="${book.name}"></td>
+                <td th:text="${book.ISBN}"></td>
+                <td th:text="${book.author}"></td>
+                <td th:text="${book.company}"></td>
+                <td th:text="${#dates.format(book.time,'YYYY-MM-dd')}"></td>
+                <td th:text="${book.price}"></td>
+                <td>
+                    <a th:href="@{'/zhongguocai/toupdate/'+${book.id}}">编辑</a>&nbsp;&nbsp;
+                    <a th:href="@{'/zhongguocai/deletebyid/'+${book.id}}">删除</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
 </body>
+<script>
+    var video=document.querySelector('video');
+    video.prototype=5;
+</script>
 </html>
